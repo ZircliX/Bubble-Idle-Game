@@ -1,6 +1,6 @@
 {
-    "name": "Bubble-Idle.Core",
-    "rootNamespace": "Bubble-Idle.Core",
+    "name": "BubbleIdle.Core",
+    "rootNamespace": "BubbleIdle.Core",
     "references": [
         ""
     ],
