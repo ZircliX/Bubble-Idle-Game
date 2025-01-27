@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace BubbleIdle.Core
+namespace BubbleIdle
 {
     [CreateAssetMenu(menuName = "GameMetrics")]
     public partial class GameMetrics : ScriptableObject

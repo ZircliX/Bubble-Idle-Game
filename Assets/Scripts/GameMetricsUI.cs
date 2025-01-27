@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace BubbleIdle.Core
+namespace BubbleIdle
 {
     public partial class GameMetrics
     {
