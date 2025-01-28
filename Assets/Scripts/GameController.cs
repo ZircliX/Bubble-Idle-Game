@@ -1,10 +1,15 @@
 using System;
+using BubbleIdle.SaveSystem;
+using SaveSystem.Core;
 using UnityEngine;
 
 namespace BubbleIdle
 {
     public static class GameController
     {
+        public static event Action OnGameSave;
+        
+        public static ProgressionManager ProgressionManager { get; private set; }
         private static GameMetrics gameMetrics;
         public static GameMetrics Metrics
         {
@@ -21,15 +26,41 @@ namespace BubbleIdle
         private static void Load()
         {
             Application.targetFrameRate = 60;
-            Application.wantsToQuit += UnLoad();
+            Application.quitting += UnLoad;
+            
+            ProgressionManager = new ProgressionManager();
+            Save.AddListener(ProgressionManager);
+            Save.SetSaveManager(new SaveManager());
 
-            //Calculer les gains hors ligne
+            LoadProgress();
         }
 
-        private static Func<bool> UnLoad()
+        private static void UnLoad()
         {
             Debug.Log("Quit Game");
-            return () => true;
+            SaveProgress();
+            Save.RemoveListener(ProgressionManager);
+        }
+
+        private static void SaveProgress()
+        {
+            Debug.Log("Saving player progress");
+
+            Save.Push<SaveFile, SaveSettings>(new SaveSettings()
+            {
+                prefName = "Player"
+            });
+            
+            OnGameSave?.Invoke();
+        }
+
+        private static void LoadProgress()
+        {
+            Debug.Log("Loading player progress");
+            Save.Pull<SaveFile, SaveSettings>(out _, new SaveSettings()
+            {
+                prefName = "Player"
+            });
         }
     }
 }
