@@ -6,8 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="8839afc5-71b1-4a18-bfd4-07041f30b142" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Bubble-Idle Game/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Bubble-Idle Game/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/BubbleIdle.Core.asmdef" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/BubbleIdle.Core.asmdef" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,6 +19,7 @@
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$USER_HOME$/AppData/Local/Temp/IntelliJEasyCodeDiff/copy_GameMetricsUI.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$USER_HOME$/AppData/Local/Temp/IntelliJEasyCodeDiff/copy_Seaweed.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/ButtonExemple.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.ltx.singletons/Runtime/MonoBehaviour/MonoSingleton.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../CIRC_GameCreation/Assets/Scripts/MiniGames/Core/MiniGame.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
