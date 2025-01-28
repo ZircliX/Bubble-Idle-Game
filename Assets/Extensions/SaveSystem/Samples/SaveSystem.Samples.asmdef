@@ -1,0 +1,14 @@
+{
+    "name": "SaveSystem.Samples",
+    "rootNamespace": "SaveSystem.Samples",
+    "references": ["GUID:3e712867162a60e44a30faa129258f36"],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

@@ -1,0 +1,19 @@
+{
+    "name": "BubbleIdle.Core",
+    "rootNamespace": "BubbleIdle.Core",
+    "references": [
+        "Unity.TextMeshPro",
+        "LTX.Singletons.Runtime",
+        "SaveSystem.Core",
+        "DOTween.Modules"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
