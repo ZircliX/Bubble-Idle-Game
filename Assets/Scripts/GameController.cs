@@ -1,10 +1,11 @@
-using System;
+using BubbleIdle.SaveSystem;
 using UnityEngine;
 
 namespace BubbleIdle
 {
     public static class GameController
     {
+        public static ProgressionManager ProgressionManager { get; private set; }
         private static GameMetrics gameMetrics;
         public static GameMetrics Metrics
         {
@@ -21,15 +22,16 @@ namespace BubbleIdle
         private static void Load()
         {
             Application.targetFrameRate = 60;
-            Application.wantsToQuit += UnLoad();
+            Application.quitting += UnLoad;
+            
+            ProgressionManager = new ProgressionManager();
 
             //Calculer les gains hors ligne
         }
 
-        private static Func<bool> UnLoad()
+        private static void UnLoad()
         {
             Debug.Log("Quit Game");
-            return () => true;
         }
     }
 }
