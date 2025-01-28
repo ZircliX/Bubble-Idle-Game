@@ -4,7 +4,8 @@
     "references": [
         "Unity.TextMeshPro",
         "LTX.Singletons.Runtime",
-        "SaveSystem.Core"
+        "SaveSystem.Core",
+        "DOTween.Modules"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],

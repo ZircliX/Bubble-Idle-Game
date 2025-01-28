@@ -1,3 +1,5 @@
+using System;
+using System.Collections.Generic;
 using SaveSystem.Core;
 
 namespace BubbleIdle.SaveSystem
@@ -9,8 +11,9 @@ namespace BubbleIdle.SaveSystem
         {
             return new SaveFile()
             {
-                number = 3,
-                label = "Default"
+                seaweeds = new List<SeaweedSave>(),
+                quitTime = DateTime.Now.ToString("o"),
+                secondsPassed = 0f
             };
         }
     }
