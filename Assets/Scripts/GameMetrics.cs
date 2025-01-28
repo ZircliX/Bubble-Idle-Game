@@ -7,5 +7,8 @@ namespace BubbleIdle
     {
         [field: SerializeField] 
         public float gameSpeed { get; private set; } = 1f;
+        
+        [field: SerializeField] 
+        public float gameflow { get; private set; } = 1f;
     }
 }
