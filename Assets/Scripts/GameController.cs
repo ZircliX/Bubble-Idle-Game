@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 namespace BubbleIdle
@@ -20,7 +21,15 @@ namespace BubbleIdle
         private static void Load()
         {
             Application.targetFrameRate = 60;
+            Application.wantsToQuit += UnLoad();
+
             //Calculer les gains hors ligne
+        }
+
+        private static Func<bool> UnLoad()
+        {
+            Debug.Log("Quit Game");
+            return () => true;
         }
     }
 }

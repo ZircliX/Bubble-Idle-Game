@@ -1,11 +1,7 @@
 {
-    "name": "BubbleIdle.Core",
-    "rootNamespace": "BubbleIdle.Core",
-    "references": [
-        "Unity.TextMeshPro",
-        "LTX.Singletons.Runtime",
-        "SaveSystem.Core"
-    ],
+    "name": "SaveSystem.Core",
+    "rootNamespace": "SaveSystem.Core",
+    "references": [],
     "includePlatforms": [],
     "excludePlatforms": [],
     "allowUnsafeCode": false,
