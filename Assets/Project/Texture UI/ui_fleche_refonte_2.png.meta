@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 991be1df892a7054490f0c49c31bd60d
+guid: 594412b6f391dc849b3c8ef63dfe35fb
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 2477827248605521180
-    second: ui_fleche_refonte_0
+      213: 4033820162392180694
+    second: ui_fleche_refonte_2_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,7 +100,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: ui_fleche_refonte_0
+      name: ui_fleche_refonte_2_0
       rect:
         serializedVersion: 2
         x: 152
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: c156ae721c2036220800000000000000
-      internalID: 2477827248605521180
+      spriteID: 6d7c13bc0120bf730800000000000000
+      internalID: 4033820162392180694
       vertices: []
       indices: 
       edges: []
