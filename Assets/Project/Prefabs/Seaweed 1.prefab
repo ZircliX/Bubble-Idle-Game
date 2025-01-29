@@ -11,8 +11,9 @@ GameObject:
   - component: {fileID: 7222153075477416969}
   - component: {fileID: 8188574440018245591}
   - component: {fileID: 5710908420736931542}
+  - component: {fileID: 5097256021823975140}
   m_Layer: 0
-  m_Name: Seaweed
+  m_Name: Seaweed 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -100,3 +101,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: de598e44e73c420786ca4073d6471f33, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!95 &5097256021823975140
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4065934295905337771}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 425dc03840c8bbb49a6be02fa9d4898a, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
