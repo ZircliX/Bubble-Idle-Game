@@ -23,5 +23,6 @@ namespace BubbleIdle.SeaweedSystem
         [Header("bubble Infos")]
         public Bubble bubblePrefab;
         public int bubbleValue;
+        public float bubbleProductionRate;
     }
 }
