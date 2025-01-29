@@ -12,7 +12,7 @@ namespace BubbleIdle.Core
     {
         [SerializeField] public Seaweed seaweedPrefab;
         private List<Seaweed> seaweeds = new List<Seaweed>();
-
+        
         protected override void Awake()
         {
             base.Awake();
@@ -21,8 +21,10 @@ namespace BubbleIdle.Core
             foreach (SeaweedSave seaweedSave in GameController.ProgressionManager.seaweeds)
             {
                 Seaweed newSeaweed = Instantiate(seaweedPrefab, seaweedSave.seaweedPosition, Quaternion.identity);
+                seaweeds.Add(newSeaweed);
                 newSeaweed.Initialize(seaweedSave.seaweedData, seaweedSave.seaweedLevel);
             }
+            //GameController.ProgressionManager.SecondsPassed
         }
 
         private void Update()

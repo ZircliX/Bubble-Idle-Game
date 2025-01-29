@@ -6,9 +6,6 @@ namespace BubbleIdle.SeaweedSystem
     {
         public SeaweedData data { get; private set; }
         public int currentLevel { get; private set; }
-        public float currentProductionRate => 
-            data.productionSpeed * 
-            Mathf.Pow(data.speedMultiplier, currentLevel - 1);
 
         public virtual void Initialize(SeaweedData data, int level = 0)
         {
@@ -32,6 +29,12 @@ namespace BubbleIdle.SeaweedSystem
                 data.baseUpgradeCost * 
                 Mathf.Pow(data.costMultiplier, currentLevel - 1)
                 );
+        }
+
+        public float GetCurrentProductionRate()
+        {
+            return data.productionSpeed * 
+                   Mathf.Pow(data.speedMultiplier, currentLevel - 1);
         }
     }
 }
