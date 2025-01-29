@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 991be1df892a7054490f0c49c31bd60d
+guid: b038591ca03dd764eb53117619064b1d
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 2477827248605521180
-    second: ui_fleche_refonte_0
+      213: -1322373018435342674
+    second: ui_shop_refonte_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: ui_fleche_refonte_0
+      name: ui_shop_refonte_0
       rect:
         serializedVersion: 2
-        x: 152
-        y: 186
-        width: 195
-        height: 157
+        x: 117
+        y: 191
+        width: 278
+        height: 144
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: c156ae721c2036220800000000000000
-      internalID: 2477827248605521180
+      spriteID: eaea997febcf5ade0800000000000000
+      internalID: -1322373018435342674
       vertices: []
       indices: 
       edges: []
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      ui_fleche_refonte_0: 2477827248605521180
+      ui_shop_refonte_0: -1322373018435342674
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
