@@ -1,16 +1,15 @@
-using System;
 using System.Collections.Generic;
 using BubbleIdle.SaveSystem;
 using BubbleIdle.SeaweedSystem;
 using LTX.Singletons;
 using UnityEngine;
-using Random = UnityEngine.Random;
 
 namespace BubbleIdle.Core
 {
     public class SeaweedManager : MonoSingleton<SeaweedManager>
     {
-        [SerializeField] public Seaweed seaweedPrefab;
+        [SerializeField] private Seaweed seaweedPrefab;
+        [field : SerializeField] public Transform[] seaweedsPos { get; private set; }
         private List<Seaweed> seaweeds = new List<Seaweed>();
         
         protected override void Awake()
@@ -38,6 +37,7 @@ namespace BubbleIdle.Core
         public void AddSeaweed(Seaweed newSeaweed)
         {
             seaweeds.Add(newSeaweed);
+            newSeaweed.transform.position = seaweedsPos[newSeaweed.data.seaweedType].position;
             GameController.ProgressionManager.AddSeaweed(newSeaweed);
         }
     }
