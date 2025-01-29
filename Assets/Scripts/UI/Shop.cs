@@ -11,10 +11,13 @@ namespace BubbleIdle.Core
 
         public void BuySeaweed()
         {
-            Seaweed newSeaweed = Instantiate(seaweedPrefab);
-            newSeaweed.transform.position += (Vector3)Random.insideUnitCircle.normalized * 5f;
-            newSeaweed.Initialize(seaweedTypes[0]);
-            SeaweedManager.Instance.AddSeaweed(newSeaweed);
+            if (GameController.ResourcesManager.SpendBubbles(50))
+            {
+                Seaweed newSeaweed = Instantiate(seaweedPrefab);
+                newSeaweed.Initialize(seaweedTypes[0], 1);
+                
+                SeaweedManager.Instance.AddSeaweed(newSeaweed);
+            }
         }
     }
 }

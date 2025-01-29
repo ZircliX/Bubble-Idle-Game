@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using BubbleIdle.Core;
 using BubbleIdle.SeaweedSystem;
 using SaveSystem.Core;
 using UnityEngine;
@@ -15,11 +16,12 @@ namespace BubbleIdle.SaveSystem
         
         public void Write(ref SaveFile saveFile)
         {
-            saveFile.seaweeds = seaweeds;
-            
             DateTime time = DateTime.Now;
             string timeString = time.ToString("o"); // ISO 8601 format
             saveFile.quitTime = timeString;
+            
+            saveFile.seaweeds = seaweeds;
+            saveFile.bubbles = GameController.ResourcesManager.BubbleCount;
             
             Debug.Log("Write");
         }
@@ -27,14 +29,14 @@ namespace BubbleIdle.SaveSystem
         public void Read(in SaveFile saveFile)
         {
             seaweeds.Clear();
-            
-            seaweeds = saveFile.seaweeds;
 
             DateTime savedTime = DateTime.Parse(saveFile.quitTime);
             DateTime currentTime = DateTime.Now;
-
             TimeSpan timePassed = currentTime - savedTime;
             SecondsPassed = (float)timePassed.TotalSeconds;
+            
+            GameController.ResourcesManager.AddBubbles(saveFile.bubbles);
+            seaweeds = saveFile.seaweeds;
             
             Debug.Log("Read");
         }

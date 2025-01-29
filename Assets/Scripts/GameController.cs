@@ -1,4 +1,5 @@
 using System;
+using BubbleIdle.Core;
 using BubbleIdle.SaveSystem;
 using SaveSystem.Core;
 using UnityEngine;
@@ -10,6 +11,7 @@ namespace BubbleIdle
         public static event Action OnGameSave;
         
         public static ProgressionManager ProgressionManager { get; private set; }
+        public static ResourcesManager ResourcesManager { get; private set; }
         private static GameMetrics gameMetrics;
         public static GameMetrics Metrics
         {
@@ -28,6 +30,7 @@ namespace BubbleIdle
             Application.targetFrameRate = 60;
             Application.quitting += UnLoad;
             
+            ResourcesManager = new ResourcesManager();
             ProgressionManager = new ProgressionManager();
             Save.AddListener(ProgressionManager);
             Save.SetSaveManager(new SaveManager());

@@ -1,10 +1,9 @@
 using System;
-using LTX.Singletons;
 using UnityEngine;
 
 namespace BubbleIdle.Core
 {
-    public class ResourcesManager : MonoSingleton<ResourcesManager>
+    public class ResourcesManager
     {
         public int BubbleCount { get; private set; }
         public event Action<int> OnBubbleCountChanged;
@@ -21,7 +20,7 @@ namespace BubbleIdle.Core
             {
                 BubbleCount -= amount;
                 OnBubbleCountChanged?.Invoke(BubbleCount);
-                Debug.Log($"Bubbles Spent:{amount}. Remaining : {BubbleCount}");
+                Debug.Log($"Bubbles Spent : {amount} | Remaining : {BubbleCount}");
                 return true;
             }
             else
