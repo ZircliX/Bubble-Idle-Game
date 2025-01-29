@@ -1,6 +1,6 @@
 using BubbleIdle.SeaweedSystem;
 
-namespace BubbleIdle.Core.SeaweedsSystem
+namespace BubbleIdle.SeaweedsSystem
 {
     public class SpecialSeaweed : Seaweed
     {

@@ -1,17 +1,15 @@
 using System.Collections.Generic;
-using BubbleIdle.Core.SeaweedsSystem;
 using BubbleIdle.SaveSystem;
-using BubbleIdle.SeaweedSystem;
 using LTX.Singletons;
 using UnityEngine;
 
-namespace BubbleIdle.Core
+namespace BubbleIdle.SeaweedSystem
 {
     public class SeaweedManager : MonoSingleton<SeaweedManager>
     {
         [SerializeField] private Seaweed seaweedPrefab;
         [field : SerializeField] public Transform[] seaweedsPos { get; private set; }
-        private List<Seaweed> seaweeds = new List<Seaweed>();
+        public List<Seaweed> seaweeds { get; private set; } = new List<Seaweed>();
         
         protected override void Awake()
         {
@@ -44,12 +42,13 @@ namespace BubbleIdle.Core
                 Seaweed newSeaweed = Instantiate(seaweedPrefab, seaweedSave.seaweedPosition, Quaternion.identity);
                 seaweeds.Add(newSeaweed);
                 newSeaweed.Initialize(seaweedSave.seaweedData, seaweedSave.seaweedLevel);
+                EventManager.Instance.BuySeaweed(newSeaweed);
                 
                 //Calculate offline production
                 float bubbleProductionRate = newSeaweed.GetProductionAtLevel() / newSeaweed.data.productionCooldown;
                 int bubblesProduced = Mathf.FloorToInt(bubbleProductionRate * GameController.ProgressionManager.SecondsPassed);
                 GameController.ResourcesManager.AddBubbles(bubblesProduced);
-                Debug.Log($"Seaweed {seaweedSave.seaweedData.seaweedType} produced {bubblesProduced} bubbles while offline.");
+                //Debug.Log($"Seaweed {seaweedSave.seaweedData.seaweedType} produced {bubblesProduced} bubbles while offline.");
             }
         }
     }

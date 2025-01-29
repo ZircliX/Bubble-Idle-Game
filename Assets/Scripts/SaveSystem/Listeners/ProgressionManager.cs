@@ -1,6 +1,5 @@
 using System;
 using System.Collections.Generic;
-using BubbleIdle.Core;
 using BubbleIdle.SeaweedSystem;
 using SaveSystem.Core;
 using UnityEngine;

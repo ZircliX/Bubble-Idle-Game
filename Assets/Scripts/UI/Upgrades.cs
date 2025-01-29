@@ -1,17 +1,15 @@
-using System.Collections.Generic;
+using System;
+using System.Text.RegularExpressions;
 using BubbleIdle.SeaweedSystem;
 using UnityEngine;
 
 namespace BubbleIdle.UI
 {
-    public class Shop : MonoBehaviour
+    public class Upgrades : MonoBehaviour
     {
         [Header("UI Tabs")] 
-        [SerializeField] private UITabShop[] tabs;
+        [SerializeField] private UITabUpgrade[] tabs;
         
-        public Seaweed seaweedPrefab;
-        public List<SeaweedData> seaweedTypes;
-
         private void OnEnable()
         {
             EventManager.Instance.OnMoneyChange += UpdateUI;
@@ -32,37 +30,28 @@ namespace BubbleIdle.UI
                     : Color.red;
             }
         }
-
+        
         private bool IsRich(int index)
         {
             return GameController.ResourcesManager.SpendBubbles(int.Parse(tabs[index].cost.text));
         }
 
-        public void BuySeaweed(int index)
+        public void UpgradeSeaweed(int index)
         {
             if (IsRich(index))
             {
-                Seaweed newSeaweed = Instantiate(seaweedPrefab);
-                newSeaweed.Initialize(seaweedTypes[0], 1);
+                SeaweedManager.Instance.seaweeds[index].Upgrade();
                 
-                SeaweedManager.Instance.AddSeaweed(newSeaweed);
-                EventManager.Instance.BuySeaweed(newSeaweed);
-            }
-        }
-        
-        public void BuyFish(int index)
-        {
-            if (IsRich(index))
-            {
-                //Spawn Fish
-            }
-        }
-        
-        public void BuyCoral(int index)
-        {
-            if (IsRich(index))
-            {
-                //Add Coral
+                Match match = Regex.Match(tabs[index].level.text, @"\d+");
+
+                if (match.Success)
+                {
+                    int level = int.Parse(match.Value);
+                    Console.WriteLine(level); // Output: 2
+                    tabs[index].level.text = $"lvl. {level + 1}";
+                }
+                
+                tabs[index].cost.text = SeaweedManager.Instance.seaweeds[index].GetUpgradeCost().ToString();
             }
         }
     }

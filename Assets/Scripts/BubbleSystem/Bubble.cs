@@ -1,4 +1,3 @@
-using BubbleIdle.Core;
 using DG.Tweening;
 using UnityEngine;
 using UnityEngine.EventSystems;

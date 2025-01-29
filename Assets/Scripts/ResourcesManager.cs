@@ -1,26 +1,27 @@
 using System;
 using UnityEngine;
 
-namespace BubbleIdle.Core
+namespace BubbleIdle
 {
     public class ResourcesManager
     {
         public int BubbleCount { get; private set; }
-        public event Action<int> OnBubbleCountChanged;
+        
         public void AddBubbles(int amount)
         {
             BubbleCount += amount;
-            OnBubbleCountChanged?.Invoke(BubbleCount);
-            Debug.Log($"Bubbles Added:{amount}. Total : {BubbleCount}");
+            EventManager.Instance.ChangeMoney();
+            //Debug.Log($"Bubbles Added:{amount}. Total : {BubbleCount}");
         }
 
         public bool SpendBubbles(int amount)
         {
+            Debug.Log($"Amount : {amount}");
             if (BubbleCount >= amount)
             {
                 BubbleCount -= amount;
-                OnBubbleCountChanged?.Invoke(BubbleCount);
-                Debug.Log($"Bubbles Spent : {amount} | Remaining : {BubbleCount}");
+                EventManager.Instance.ChangeMoney();
+                //Debug.Log($"Bubbles Spent : {amount} | Remaining : {BubbleCount}");
                 return true;
             }
             else

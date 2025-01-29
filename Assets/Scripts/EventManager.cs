@@ -1,4 +1,5 @@
 using System;
+using BubbleIdle.SeaweedSystem;
 using LTX.Singletons;
 
 namespace BubbleIdle
@@ -12,19 +13,24 @@ namespace BubbleIdle
         public void ClickBubble() => OnBubbleClick?.Invoke();
         
         //Seaweeds
-        public event Action OnSeaweedBuy;
-        public void BuySeaweed() => OnSeaweedBuy?.Invoke();
+        public event Action<Seaweed> OnSeaweedBuy;
+        public event Action OnSeaweedBuySound;
+
+        public void BuySeaweed(Seaweed seaweed)
+        {
+            OnSeaweedBuy?.Invoke(seaweed);
+            OnSeaweedBuySound?.Invoke();
+        }
+
         public event Action OnSeaweedUpgrade;
         public void UpgradeSeaweed() => OnSeaweedUpgrade?.Invoke();
         
         //Money
-        public event Action<int> OnMoneyAdd;
-        public event Action OnMoneyAddSound;
+        public event Action OnMoneyChange;
 
-        public void AddMoney(int value)
+        public void ChangeMoney()
         {
-            OnMoneyAdd?.Invoke(value);
-            OnMoneyAddSound?.Invoke();
+            OnMoneyChange?.Invoke();
         }
     }
 }

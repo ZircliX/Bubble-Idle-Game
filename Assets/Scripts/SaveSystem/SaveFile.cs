@@ -1,5 +1,4 @@
 using System.Collections.Generic;
-using BubbleIdle.SeaweedSystem;
 using SaveSystem.Core;
 using UnityEngine;
 
@@ -15,13 +14,5 @@ namespace BubbleIdle.SaveSystem
         [SerializeField] public float secondsPassed;
         
         [SerializeField] public int bubbles;
-    }
-
-    [System.Serializable]
-    public struct SeaweedSave
-    {
-        public SeaweedData seaweedData;
-        public int seaweedLevel;
-        public Vector3 seaweedPosition;
     }
 }
