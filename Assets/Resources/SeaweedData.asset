@@ -13,6 +13,14 @@ MonoBehaviour:
   m_Name: SeaweedData
   m_EditorClassIdentifier: 
   seaweedName: SeaRemi
-  productionSpeed: 5
+  levelsIcon:
+  - {fileID: 21300000, guid: fa013bd791acad34daccb1a66d4016f6, type: 3}
+  - {fileID: 21300000, guid: a9df0193378f97c429083839540657c3, type: 3}
+  - {fileID: 21300000, guid: 6288cadb176861f4bac1e3deec736bf0, type: 3}
+  baseProduction: 5
+  productionCooldown: 2
   speedMultiplier: 1.2
-  levelsIcon: []
+  baseCost: 50
+  costMultiplier: 1.5
+  bubblePrefab: {fileID: 7850282121599577690, guid: 5764917c328d89e4a8abf18ec1797575, type: 3}
+  bubbleValue: 25

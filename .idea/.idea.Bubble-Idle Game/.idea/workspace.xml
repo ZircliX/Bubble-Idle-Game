@@ -5,12 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8839afc5-71b1-4a18-bfd4-07041f30b142" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/SaveSystem/Listeners/ProgressionManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Bubble-Idle Game/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Bubble-Idle Game/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/ZircliX-Scene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/ZircliX-Scene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SaveSystem/Listeners/NumberSaveListener.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SaveSystem/Listeners/NumberSaveListener.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SaveSystem/Listeners/ProgressionManager.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SeaweedsSystem/SeaweedManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SeaweedsSystem/SeaweedManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -107,6 +103,7 @@
       <workItem from="1737988595377" duration="9263000" />
       <workItem from="1738051293500" duration="757000" />
       <workItem from="1738062332232" duration="1130000" />
+      <workItem from="1738104457341" duration="31000" />
     </task>
     <servers />
   </component>

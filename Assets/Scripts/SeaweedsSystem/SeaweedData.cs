@@ -1,3 +1,4 @@
+using BubbleIdle.BubbleSystem;
 using UnityEngine;
 
 namespace BubbleIdle.SeaweedSystem
@@ -7,14 +8,21 @@ namespace BubbleIdle.SeaweedSystem
     {
         [Header("Basic Infos")]
         public string seaweedName;
+        public int seaweedType;
         public Sprite[] levelsIcon;
-        
+
         [Header("Production")]
-        public float productionSpeed;
+        public float baseProduction;
+        public float productionCooldown;
         public float speedMultiplier;
 
         [Header("Upgrades")] 
-        public int baseUpgradeCost;
+        public int baseCost;
         public float costMultiplier;
+
+        [Header("bubble Infos")]
+        public Bubble bubblePrefab;
+        public int bubbleValue;
+        public float bubbleProductionRate;
     }
 }
