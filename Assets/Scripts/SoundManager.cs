@@ -10,11 +10,17 @@ namespace BubbleIdle
         
         private void OnEnable()
         {
+            //Bubbles
             EventManager.Instance.OnBubbleSpawn += () => PlayClip(nameof(EventManager.Instance.OnBubbleSpawn));
             EventManager.Instance.OnBubbleClick += () => PlayClip(nameof(EventManager.Instance.OnBubbleClick));
             
+            //Seaweeds
             EventManager.Instance.OnSeaweedBuySound += () => PlayClip(nameof(EventManager.Instance.OnSeaweedBuySound));
             EventManager.Instance.OnSeaweedUpgrade += () => PlayClip(nameof(EventManager.Instance.OnSeaweedUpgrade));
+            
+            //UI
+            EventManager.Instance.OnUIOpen += () => PlayClip(nameof(EventManager.Instance.OnUIOpen));
+
         }
 
         private void PlayClip(string clipName)

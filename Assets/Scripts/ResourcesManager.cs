@@ -1,18 +1,24 @@
-using System;
+using System.Numerics;
 using UnityEngine;
 
 namespace BubbleIdle
 {
     public class ResourcesManager
     {
-        public float ProductionBonus { get; private set; }
-        public long BubbleCount { get; private set; }
+        public float ProductionBonus { get; private set; } = 1;
+        public BigInteger BubbleCount { get; private set; }
         
-        public void AddBubbles(long amount)
+        public void AddBubbles(string amount)
+        {
+            if (BigInteger.TryParse(amount, out BigInteger result))
+            {
+                AddBubbles(result);
+            }
+        }
+        public void AddBubbles(BigInteger amount)
         {
             BubbleCount += amount;
             EventManager.Instance.ChangeMoney();
-            //Debug.Log($"Bubbles Added:{amount}. Total : {BubbleCount}");
         }
 
         public void AddProductionBonus(float amount)
@@ -20,14 +26,23 @@ namespace BubbleIdle
             ProductionBonus += amount;
         }
 
-        public bool SpendBubbles(long amount)
+        public bool SpendBubbles(string amount)
         {
-            Debug.Log($"Amount : {amount}");
+            if (BigInteger.TryParse(amount, out BigInteger result))
+            {
+                return SpendBubbles(result);
+            }
+            else
+            {
+                return false;
+            }
+        }
+        public bool SpendBubbles(BigInteger amount)
+        {
             if (BubbleCount >= amount)
             {
                 BubbleCount -= amount;
                 EventManager.Instance.ChangeMoney();
-                //Debug.Log($"Bubbles Spent : {amount} | Remaining : {BubbleCount}");
                 return true;
             }
             else

@@ -10,9 +10,13 @@ namespace BubbleIdle.SeaweedSystem
             this.currentLevel = level;
             
             sr = transform.GetChild(0).GetComponent<SpriteRenderer>();
-            sr.sprite = data.levelsIcon[level];
-            
-            ApplyBoostEffect();
+            int spriteIndex = Mathf.Clamp(level / 10, 0, 2);
+            sr.sprite = data.levelsIcon[spriteIndex];
+
+            for (int i = 0; i < level; i++)
+            {
+                ApplyBoostEffect();
+            }
         }
 
         public override void Refresh()

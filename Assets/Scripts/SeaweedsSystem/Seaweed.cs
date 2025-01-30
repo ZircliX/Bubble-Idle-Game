@@ -25,7 +25,7 @@ namespace BubbleIdle.SeaweedSystem
             productionTimer += Time.deltaTime;
             if (productionTimer >= data.productionCooldown)
             {
-                GameController.ResourcesManager.AddBubbles(GetProductionAtLevel());
+                GameController.ResourcesManager.AddBubbles(GetProductionAtLevel().ToString());
                 productionTimer = 0;
             }
 
@@ -41,7 +41,7 @@ namespace BubbleIdle.SeaweedSystem
         {
             Bubble newBubble = Instantiate(data.bubblePrefab);
             newBubble.transform.position = transform.position;
-            newBubble.Initialize(data.bubbleValue);
+            newBubble.Initialize(data, currentLevel);
         }
 
         public virtual void Upgrade()

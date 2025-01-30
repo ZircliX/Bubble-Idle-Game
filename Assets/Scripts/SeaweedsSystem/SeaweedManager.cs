@@ -16,7 +16,7 @@ namespace BubbleIdle.SeaweedSystem
         protected override void Awake()
         {
             base.Awake();
-            Debug.Log($"Time since last login : {Mathf.FloorToInt(GameController.ProgressionManager.SecondsPassed)} seconds");
+            Debug.Log($"Time since last login : {GameController.ProgressionManager.SecondsPassed} seconds");
             
             SpawnSavedSeaweeds();
         }

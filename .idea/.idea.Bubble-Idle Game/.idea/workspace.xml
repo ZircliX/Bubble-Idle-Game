@@ -5,80 +5,28 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8839afc5-71b1-4a18-bfd4-07041f30b142" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Project/AudioClips/BuySeaweed.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Project/AudioClips/SpawnBubble.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Project/Prefabs/Fish.prefab" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Project/Prefabs/Fish.prefab.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Project/Prefabs/Manager.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Project/Prefabs/Manager/VFXManager.prefab" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Project/Prefabs/Manager/VFXManager.prefab.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Project/Prefabs/VisualEffect.prefab" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Project/Prefabs/VisualEffect.prefab.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Project/ScriptableObjects/Fishs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Project/ScriptableObjects/Fishs/FishData.asset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Project/ScriptableObjects/Fishs/FishData.asset.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Project/ScriptableObjects/Seaweeds.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Project/VFX.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Project/VFX/BubblePop.vfx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Project/VFX/BubblePop.vfx.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/VFXManager.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/VFXManager.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Bubble-Idle Game/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Bubble-Idle Game/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/AudioClips/MouthBubblePop.wav" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/AudioClips/MouthBubblePop.wav.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/AudioClips/SpawnBubble.mp3.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/AudioClips/Shelter in a Cave.mp3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/AudioClips/Shelter in a Cave.mp3.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/AudioClips/SynthBubblePop.wav" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/AudioClips/SynthBubblePop.wav.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/AudioClips/BuySeaweed.mp3.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/Prefabs/AudioManager.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/Prefabs/Manager/AudioManager.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/Prefabs/AudioManager.prefab.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/Prefabs/Manager/AudioManager.prefab.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/Prefabs/Bubble.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/Prefabs/Bubble.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/Prefabs/Seaweed.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/Prefabs/Seaweed.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/Prefabs/SeaweedManager.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/Prefabs/Manager/SeaweedManager.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/Prefabs/SeaweedManager.prefab.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/Prefabs/Manager/SeaweedManager.prefab.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/Prefabs/SpecialSeaweed.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/Prefabs/SpecialSeaweed.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Project/Prefabs/Manager/AudioManager.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/Prefabs/Manager/AudioManager.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Project/Prefabs/UI/Canvas.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/Prefabs/UI/Canvas.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/ScriptableObjects/1_Seaweed.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/ScriptableObjects/Seaweeds/1_Seaweed.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/ScriptableObjects/1_Seaweed.asset.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/ScriptableObjects/Seaweeds/1_Seaweed.asset.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/ScriptableObjects/2_Seaweed.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/ScriptableObjects/Seaweeds/2_Seaweed.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/ScriptableObjects/2_Seaweed.asset.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/ScriptableObjects/Seaweeds/2_Seaweed.asset.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/ScriptableObjects/3_Seaweed.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/ScriptableObjects/Seaweeds/3_Seaweed.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/ScriptableObjects/3_Seaweed.asset.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/ScriptableObjects/Seaweeds/3_Seaweed.asset.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/ScriptableObjects/4_SpecialSeaweed.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/ScriptableObjects/Seaweeds/4_SpecialSeaweed.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/ScriptableObjects/4_SpecialSeaweed.asset.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/ScriptableObjects/Seaweeds/4_SpecialSeaweed.asset.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/Textures/Final/Algue Basique/algue_basique_niv1.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/Textures/Final/Algue Basique/algue_basique_niv1.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/Textures/Final/Algue Basique/algue_basique_niv2.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/Textures/Final/Algue Basique/algue_basique_niv2.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/Textures/Final/Algue Basique/algue_basique_niv3.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/Textures/Final/Algue Basique/algue_basique_niv3.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/Textures/Final/Algue Bleue/algue_bleu_niv1.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/Textures/Final/Algue Bleue/algue_bleu_niv1.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/Textures/Final/Algue Bleue/algue_bleu_niv2.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/Textures/Final/Algue Bleue/algue_bleu_niv2.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/Textures/Final/Algue Bleue/algue_bleu_niv3.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/Textures/Final/Algue Bleue/algue_bleu_niv3.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/Textures/Final/Algue Orange/algue_orange_niv1.PNG.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/Textures/Final/Algue Orange/algue_orange_niv1.PNG.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/Textures/Final/Algue Orange/algue_orange_niv2.PNG.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/Textures/Final/Algue Orange/algue_orange_niv2.PNG.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/Textures/Final/Algue Orange/algue_orange_niv3.PNG.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/Textures/Final/Algue Orange/algue_orange_niv3.PNG.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/Textures/Final/Algue Rose/algue_rose_niv1.PNG.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/Textures/Final/Algue Rose/algue_rose_niv1.PNG.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/Textures/Final/Algue Rose/algue_rose_niv2.PNG.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/Textures/Final/Algue Rose/algue_rose_niv2.PNG.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/Textures/Final/Algue Rose/algue_rose_niv3.PNG.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/Textures/Final/Algue Rose/algue_rose_niv3.PNG.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/Textures/Final/bulle1.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/Textures/Final/bulle1.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Project/ScriptableObjects/Fishs/FishData.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/ScriptableObjects/Fishs/FishData.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Project/ScriptableObjects/Seaweeds/1_Seaweed.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/ScriptableObjects/Seaweeds/1_Seaweed.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Project/ScriptableObjects/Seaweeds/2_Seaweed.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/ScriptableObjects/Seaweeds/2_Seaweed.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Project/ScriptableObjects/Seaweeds/3_Seaweed.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/ScriptableObjects/Seaweeds/3_Seaweed.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Project/ScriptableObjects/Seaweeds/4_SpecialSeaweed.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/ScriptableObjects/Seaweeds/4_SpecialSeaweed.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/ZircliX-Scene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/ZircliX-Scene.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/BubbleSystem/Bubble.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/BubbleSystem/Bubble.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/EventManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/EventManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/FishSystem/Fish.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/FishSystem/Fish.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/FishSystem/FishData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/FishSystem/FishData.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/FishSystem/FishManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/FishSystem/FishManager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/ResourcesManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ResourcesManager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/SaveSystem/Listeners/ProgressionManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SaveSystem/Listeners/ProgressionManager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/SaveSystem/SaveFile.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SaveSystem/SaveFile.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SaveSystem/SeaweedSave.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SaveSystem/SeaweedSave.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SaveSystem/SaveSettings.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SaveSystem/SaveSettings.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/SeaweedsSystem/Seaweed.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SeaweedsSystem/Seaweed.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SeaweedsSystem/SeaweedData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SeaweedsSystem/SeaweedData.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/SeaweedsSystem/SeaweedManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SeaweedsSystem/SeaweedManager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/SeaweedsSystem/SpecialSeaweed.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SeaweedsSystem/SpecialSeaweed.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/SoundManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SoundManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/PSS.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/PSS.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/Shop.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/Shop.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/manifest.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/VFXManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/VFXManager.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/Struct/UITabShop.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/Struct/UITabShop.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -92,10 +40,13 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$USER_HOME$/AppData/Local/Temp/IntelliJEasyCodeDiff/copy_GameMetricsUI.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$USER_HOME$/AppData/Local/Temp/IntelliJEasyCodeDiff/copy_Seaweed.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$USER_HOME$/AppData/Local/Temp/IntelliJEasyCodeDiff/copy_SoundManager.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/45b9485b4ba64564b30d91e935218d549b6e00/df/8b2fc2fc/Editor.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/b5bf0c891ea345fe93688f835df32fdc1dda00/63/8e877347/Mathf.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/SaveSystem/Listeners/ProgressionManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/SaveSystem/SaveFile.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/SaveSystem/SaveManager.cs" root0="FORCE_HIGHLIGHTING" />
@@ -103,6 +54,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/SaveSystem/SaveSetup.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.ltx.singletons/Runtime/MonoBehaviour/MonoSingleton.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.2d.aseprite/Editor/AsepriteImporter.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.inputsystem/InputSystem/InputManager.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui/Editor/UGUI/UI/GraphicEditor.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../CIRC_GameCreation/Assets/Scripts/MiniGames/Core/MiniGame.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
@@ -156,10 +108,10 @@
       </option>
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="11120">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="33008">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" value="11120" />
+      <option name="pid" value="33008" />
       <option name="projectPathOnTarget" />
       <option name="runtimes">
         <list>
@@ -198,6 +150,25 @@
   <component name="UnityUnitTestConfiguration" currentTestLauncher="Both" />
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/Scripts/BubbleSystem/Bubble.cs</url>
+          <line>56</line>
+          <properties documentPath="C:\Users\lolof\Documents\GitHub\Bubble-Idle Game\Assets\Scripts\BubbleSystem\Bubble.cs" containingFunctionPresentation="Method 'OnPointerDown'">
+            <startOffsets>
+              <option value="2171" />
+            </startOffsets>
+            <endOffsets>
+              <option value="2172" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="10" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
