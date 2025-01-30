@@ -24,5 +24,12 @@ namespace BubbleIdle.SeaweedSystem
         public Bubble bubblePrefab;
         public int bubbleValue;
         public float bubbleProductionRate;
+        
+      
     }
 }
+
+/*
+Pas de specialSeaweedData
+au lieu d'utiliser boostMultiplier : utiliser data.baseProduction
+*/

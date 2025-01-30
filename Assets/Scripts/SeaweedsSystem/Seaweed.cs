@@ -46,6 +46,7 @@ namespace BubbleIdle.SeaweedSystem
         public virtual void Upgrade()
         {
             currentLevel++;
+            sr.sprite = data.levelsIcon[currentLevel / 10];
         }
         
         public int GetUpgradeCost(int nextLevel = 0)
@@ -57,7 +58,7 @@ namespace BubbleIdle.SeaweedSystem
         public int GetProductionAtLevel(int nextLevel = 0)
         {
             float nextLevelProduction = data.baseProduction * Mathf.Pow(currentLevel + nextLevel, data.speedMultiplier);
-            return Mathf.RoundToInt(nextLevelProduction);
+            return Mathf.RoundToInt(nextLevelProduction * GameController.ResourcesManager.ProductionBonus);
         }
     }
 }
