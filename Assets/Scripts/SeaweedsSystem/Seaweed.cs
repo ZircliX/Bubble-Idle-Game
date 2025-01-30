@@ -7,7 +7,7 @@ namespace BubbleIdle.SeaweedSystem
     {
         public SeaweedData data { get; private set; }
         public int currentLevel { get; private set; }
-        private float productionTimer;
+        private float productionTimer, bubbleTimer;
         private SpriteRenderer sr;
 
         public virtual void Initialize(SeaweedData data, int level = 0)
@@ -24,8 +24,15 @@ namespace BubbleIdle.SeaweedSystem
             productionTimer += Time.deltaTime;
             if (productionTimer >= data.productionCooldown)
             {
-                ProduceBubble();
+                GameController.ResourcesManager.AddBubbles(GetProductionAtLevel());
                 productionTimer = 0;
+            }
+
+            bubbleTimer += Time.deltaTime;
+            if (bubbleTimer >= data.bubbleProductionRate)
+            {
+                ProduceBubble();
+                bubbleTimer = 0;
             }
         }
 
@@ -43,14 +50,14 @@ namespace BubbleIdle.SeaweedSystem
         
         public int GetUpgradeCost(int nextLevel = 0)
         {
-            float nextLevelCost = data.baseCost * Mathf.Pow(currentLevel + nextLevel, 1.5f);
+            float nextLevelCost = data.baseCost * Mathf.Pow(currentLevel + nextLevel, data.costMultiplier);
             return Mathf.RoundToInt(nextLevelCost);
         }
 
-        public float GetCurrentProductionRate(int nextLevel = 0)
+        public int GetProductionAtLevel(int nextLevel = 0)
         {
-            float nextLevelProduction = data.baseProduction * Mathf.Pow(currentLevel + nextLevel, 1.2f);
-            return nextLevelProduction / data.productionCooldown;
+            float nextLevelProduction = data.baseProduction * Mathf.Pow(currentLevel + nextLevel, data.speedMultiplier);
+            return Mathf.RoundToInt(nextLevelProduction);
         }
     }
 }

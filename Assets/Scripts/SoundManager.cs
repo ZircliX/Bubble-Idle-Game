@@ -13,21 +13,21 @@ namespace BubbleIdle
             EventManager.Instance.OnBubbleSpawn += () => PlayClip(nameof(EventManager.OnBubbleSpawn));
             EventManager.Instance.OnBubbleClick += () => PlayClip(nameof(EventManager.OnBubbleClick));
             
-            EventManager.Instance.OnSeaweedBuy += () => PlayClip(nameof(EventManager.OnSeaweedBuy));
+            EventManager.Instance.OnSeaweedBuySound += () => PlayClip(nameof(EventManager.OnSeaweedBuySound));
             EventManager.Instance.OnSeaweedUpgrade += () => PlayClip(nameof(EventManager.OnSeaweedUpgrade));
             
-            EventManager.Instance.OnMoneyAddSound += () => PlayClip(nameof(EventManager.OnMoneyAddSound));
+            EventManager.Instance.OnMoneyChange += () => PlayClip(nameof(EventManager.OnMoneyChange));
         }
 
-        private void PlayClip(string name)
+        private void PlayClip(string clipName)
         {
-            AudioClip clip = audioClips
-                .Where(data => data.name == name)
-                .Select(data => data.clip)
-                .FirstOrDefault();
+            AudioName clipData = audioClips
+                .FirstOrDefault(data => data.name == clipName);
 
-            audioSource.clip = clip;
-            audioSource.Play();
+            if (clipData.needPitch) audioSource.pitch = Random.Range(0.7f, 1.3f);
+            else audioSource.pitch = 1;
+            
+            audioSource.PlayOneShot(clipData.clip);
         }
     }
 
@@ -36,5 +36,6 @@ namespace BubbleIdle
     {
         public string name;
         public AudioClip clip;
+        public bool needPitch;
     }
 }

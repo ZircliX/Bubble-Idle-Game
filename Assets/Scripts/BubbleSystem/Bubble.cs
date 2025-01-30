@@ -52,6 +52,8 @@ namespace BubbleIdle.BubbleSystem
         
         public void OnPointerClick(PointerEventData eventData)
         {
+            EventManager.Instance.ClickBubble();
+            GameController.ResourcesManager.AddBubbles(bubbleValue);
             Destroy(gameObject);
         }
     }
