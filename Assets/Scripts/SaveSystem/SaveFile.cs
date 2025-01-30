@@ -13,6 +13,6 @@ namespace BubbleIdle.SaveSystem
         [SerializeField] public string quitTime;
         [SerializeField] public float secondsPassed;
         
-        [SerializeField] public int bubbles;
+        [SerializeField] public long bubbles;
     }
 }

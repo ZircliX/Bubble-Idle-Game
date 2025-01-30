@@ -436,18 +436,28 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   audioSource: {fileID: 3678430271934986937}
   audioClips:
-  - name: OnBubbleClick
-    clip: {fileID: 8300000, guid: 989640bc44f71a945afd0454c9be6d4a, type: 3}
-    needPitch: 1
   - name: OnBubbleSpawn
-    clip: {fileID: 0}
+    clips:
+    - {fileID: 8300000, guid: a3fc7f64f804cb4429f8cbda0095d4c6, type: 3}
     needPitch: 1
-  - name: OnSeaweedBuy
-    clip: {fileID: 0}
+    volume: 0.7
+  - name: OnBubbleClick
+    clips:
+    - {fileID: 8300000, guid: 989640bc44f71a945afd0454c9be6d4a, type: 3}
     needPitch: 1
+    volume: 1
+  - name: OnSeaweedBuySound
+    clips:
+    - {fileID: 8300000, guid: 218573575b7564541b30848625eef6f2, type: 3}
+    needPitch: 1
+    volume: 1
   - name: OnSeaweedUpgrade
-    clip: {fileID: 0}
+    clips:
+    - {fileID: 8300000, guid: 989640bc44f71a945afd0454c9be6d4a, type: 3}
     needPitch: 1
+    volume: 0
   - name: OnMoneyAddSound
-    clip: {fileID: 0}
+    clips:
+    - {fileID: 8300000, guid: 989640bc44f71a945afd0454c9be6d4a, type: 3}
     needPitch: 1
+    volume: 0

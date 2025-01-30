@@ -15,9 +15,9 @@ MonoBehaviour:
   seaweedName: OrangeSeaweed
   seaweedType: 0
   levelsIcon:
-  - {fileID: 4018986889905657175, guid: f630a616e139d914a8ae4e9b454c022d, type: 3}
-  - {fileID: -6830925300872998918, guid: 3b092be027b8df748bbc4959f868ee18, type: 3}
-  - {fileID: -5165121994822006414, guid: 8204f09167939fc48bf0325af3170377, type: 3}
+  - {fileID: 21300000, guid: f630a616e139d914a8ae4e9b454c022d, type: 3}
+  - {fileID: 21300000, guid: 3b092be027b8df748bbc4959f868ee18, type: 3}
+  - {fileID: 21300000, guid: 8204f09167939fc48bf0325af3170377, type: 3}
   baseProduction: 5
   productionCooldown: 2
   speedMultiplier: 1.25

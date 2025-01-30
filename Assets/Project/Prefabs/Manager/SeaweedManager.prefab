@@ -25,7 +25,7 @@ Transform:
   m_GameObject: {fileID: 353186073654101149}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -12.5, y: -8, z: 0}
+  m_LocalPosition: {x: -12.5, y: -5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -56,7 +56,7 @@ Transform:
   m_GameObject: {fileID: 2562769343835226528}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4, y: -8, z: 0}
+  m_LocalPosition: {x: -4, y: -5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -87,7 +87,7 @@ Transform:
   m_GameObject: {fileID: 6089306552674286357}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 12.5, y: -8, z: 0}
+  m_LocalPosition: {x: 12.5, y: -5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -118,7 +118,7 @@ Transform:
   m_GameObject: {fileID: 6774353956235091750}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4, y: -8, z: 0}
+  m_LocalPosition: {x: 4, y: -5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -172,8 +172,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3de621eaf2e7feb4eb157ca3b4491128, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  <seaweedPrefab>k__BackingField: {fileID: 5710908420736931542, guid: 91701e7843a2f2e46b9bd32536577b6c, type: 3}
-  <specialSeaweedPrefab>k__BackingField: {fileID: -8187850208680318616, guid: ef91dc6b441c4914b8f86ecdb8502c11, type: 3}
+  <seaweedPrefab>k__BackingField: {fileID: 8329691930771955563, guid: 91701e7843a2f2e46b9bd32536577b6c, type: 3}
+  <specialSeaweedPrefab>k__BackingField: {fileID: 2833382470441920279, guid: ef91dc6b441c4914b8f86ecdb8502c11, type: 3}
   <seaweedDatas>k__BackingField:
   - {fileID: 11400000, guid: 7b4ede0ce59c2e547a1214962b2f53a1, type: 2}
   - {fileID: 11400000, guid: dacd05a26afbde04c8b7f4c862d47459, type: 2}

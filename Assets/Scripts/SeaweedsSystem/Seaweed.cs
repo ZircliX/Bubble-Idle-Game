@@ -8,15 +8,16 @@ namespace BubbleIdle.SeaweedSystem
         public SeaweedData data { get; protected set; }
         public int currentLevel { get; protected set; }
         private float productionTimer, bubbleTimer;
-        private SpriteRenderer sr;
+        protected SpriteRenderer sr;
 
         public virtual void Initialize(SeaweedData data, int level = 0)
         {
             this.data = data;
             this.currentLevel = level;
 
-            sr = GetComponent<SpriteRenderer>();
-            sr.sprite = data.levelsIcon[0];
+            sr = transform.GetChild(0).GetComponent<SpriteRenderer>();
+            int spriteIndex = Mathf.Clamp(level / 10, 0, 2);
+            sr.sprite = data.levelsIcon[spriteIndex];
         }
 
         public virtual void Refresh()
@@ -46,7 +47,8 @@ namespace BubbleIdle.SeaweedSystem
         public virtual void Upgrade()
         {
             currentLevel++;
-            sr.sprite = data.levelsIcon[currentLevel / 10];
+            int spriteIndex = Mathf.Clamp(currentLevel / 10, 0, 2);
+            sr.sprite = data.levelsIcon[spriteIndex];
         }
         
         public int GetUpgradeCost(int nextLevel = 0)

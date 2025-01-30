@@ -1,10 +1,11 @@
 using DG.Tweening;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.VFX;
 
 namespace BubbleIdle.BubbleSystem
 {
-    public class Bubble : MonoBehaviour, IPointerClickHandler
+    public class Bubble : MonoBehaviour, IPointerDownHandler
     {
         private int bubbleValue;
         
@@ -49,9 +50,12 @@ namespace BubbleIdle.BubbleSystem
                 }, 1f, moveDuration)
                 .SetEase(Ease.Linear);
         }
-        
-        public void OnPointerClick(PointerEventData eventData)
+
+        public void OnPointerDown(PointerEventData eventData)
         {
+            transform.DOKill();
+            VFXManager.Instance.PlayVFX("PopBubble", transform.position);
+            
             EventManager.Instance.ClickBubble();
             GameController.ResourcesManager.AddBubbles(bubbleValue);
             Destroy(gameObject);

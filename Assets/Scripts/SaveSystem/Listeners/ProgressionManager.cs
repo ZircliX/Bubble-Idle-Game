@@ -18,11 +18,15 @@ namespace BubbleIdle.SaveSystem
             DateTime time = DateTime.Now;
             string timeString = time.ToString("o"); // ISO 8601 format
             saveFile.quitTime = timeString;
-            
+
+            for (int index = 0; index < seaweeds.Count; index++)
+            {
+                SeaweedSave seaweedSave = seaweeds[index];
+                seaweedSave.seaweedLevel = SeaweedManager.Instance.seaweeds[index].currentLevel;
+            }
+
             saveFile.seaweeds = seaweeds;
             saveFile.bubbles = GameController.ResourcesManager.BubbleCount;
-            
-            Debug.Log("Write");
         }
 
         public void Read(in SaveFile saveFile)
@@ -46,8 +50,6 @@ namespace BubbleIdle.SaveSystem
                 GameController.ResourcesManager.AddBubbles(bubblesProduced);
                 //Debug.Log($"Seaweed {seaweedSave.seaweedData.seaweedType} produced {bubblesProduced} bubbles while offline.");
             }
-            
-            Debug.Log("Read");
         }
 
         public void AddSeaweed(Seaweed seaweed)

@@ -1,4 +1,3 @@
-using System;
 using System.Collections.Generic;
 using LTX.Singletons;
 using UnityEngine;
@@ -7,16 +6,16 @@ namespace BubbleIdle.FishSystem
 {
     public class FishManager : MonoSingleton<FishManager>
     {
-        private List<Fish> activeFishes = new List<Fish>();
+        [SerializeField] private Fish fishPrefab;
+        [field : SerializeField] public FishData fishData { get; private set; }
+        public List<Fish> activeFishes { get; private set; }= new List<Fish>();
 
-        public Fish SpawnFish(FishData fishData, Vector3 position)
+        public void SpawnFish()
         {
-            GameObject fishObject = new GameObject(fishData.fishName);
-            Fish newFish = fishObject.AddComponent<Fish>();
+            Vector3 position = Vector3.zero;
+            Fish newFish = Instantiate(fishPrefab, position, Quaternion.identity);
             newFish.Initialize(fishData);
-            newFish.transform.position = position;
             activeFishes.Add(newFish);
-            return newFish;
         }
 
         private void Update()

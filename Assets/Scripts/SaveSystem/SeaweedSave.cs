@@ -4,7 +4,7 @@ using UnityEngine;
 namespace BubbleIdle.SaveSystem
 {
     [System.Serializable]
-    public struct SeaweedSave
+    public class SeaweedSave
     {
         public SeaweedData seaweedData;
         public int seaweedLevel;

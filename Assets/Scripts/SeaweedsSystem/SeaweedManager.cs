@@ -31,32 +31,38 @@ namespace BubbleIdle.SeaweedSystem
         
         public void AddSeaweed(int seaweedIndex)
         {
+            Seaweed newSeaweed;
             if (seaweedIndex == 3)
             {
-                SpecialSeaweed newSpecialSeaweed = Instantiate(specialSeaweedPrefab);
-                newSpecialSeaweed.Initialize(seaweedDatas[seaweedIndex], 1);
-                seaweeds.Add(newSpecialSeaweed);
-                newSpecialSeaweed.transform.position = seaweedsPos[newSpecialSeaweed.data.seaweedType].position;
-                
-                GameController.ProgressionManager.AddSeaweed(newSpecialSeaweed);
+                newSeaweed = Instantiate(specialSeaweedPrefab);
             }
             else
             {
-                Seaweed newSeaweed = Instantiate(seaweedPrefab);
-                newSeaweed.Initialize(seaweedDatas[seaweedIndex], 1);
-                seaweeds.Add(newSeaweed);
-                newSeaweed.transform.position = seaweedsPos[newSeaweed.data.seaweedType].position;
-                
-                GameController.ProgressionManager.AddSeaweed(newSeaweed);
+                newSeaweed = Instantiate(seaweedPrefab);
             }
+            
+            newSeaweed.Initialize(seaweedDatas[seaweedIndex], 1);
+            seaweeds.Add(newSeaweed);
+            newSeaweed.transform.position = seaweedsPos[newSeaweed.data.seaweedType].position;
+            
+            GameController.ProgressionManager.AddSeaweed(newSeaweed);
         }
 
         private void SpawnSavedSeaweeds()
         {
             foreach (SeaweedSave seaweedSave in GameController.ProgressionManager.seaweeds)
             {
+                Seaweed newSeaweed;
+                if (seaweedSave.seaweedData.seaweedType == 3)
+                {
+                    newSeaweed = Instantiate(specialSeaweedPrefab, seaweedSave.seaweedPosition, Quaternion.identity);
+                }
+                else
+                {
+                    newSeaweed = Instantiate(seaweedPrefab, seaweedSave.seaweedPosition, Quaternion.identity);
+                    
+                }
                 //Take saved seaweeds
-                Seaweed newSeaweed = Instantiate(seaweedPrefab, seaweedSave.seaweedPosition, Quaternion.identity);
                 seaweeds.Add(newSeaweed);
                 newSeaweed.Initialize(seaweedSave.seaweedData, seaweedSave.seaweedLevel);
                 EventManager.Instance.BuySeaweed(newSeaweed.data.seaweedType);

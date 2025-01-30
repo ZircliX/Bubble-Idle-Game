@@ -1,3 +1,4 @@
+using BubbleIdle.FishSystem;
 using BubbleIdle.SeaweedSystem;
 using UnityEngine;
 
@@ -7,6 +8,7 @@ namespace BubbleIdle.UI
     {
         [Header("UI Tabs")] 
         [SerializeField] private UITabShop[] tabs;
+        [SerializeField] private UITabShop fishTab;
 
         private void OnEnable()
         {
@@ -21,6 +23,7 @@ namespace BubbleIdle.UI
         
         private void UpdateUI()
         {
+            //Seaweeds
             for (int i = 0; i < tabs.Length; i++)
             {
                 UITabShop tab = tabs[i];
@@ -35,26 +38,34 @@ namespace BubbleIdle.UI
                     //if already bought
                     if (SeaweedManager.Instance.seaweeds.Count > i)
                     {
-                        tab.icon.sprite = seaweed.levelsIcon[SeaweedManager.Instance.seaweeds[i].currentLevel / 10];
-                        tab.level.text = SeaweedManager.Instance.seaweeds[i].currentLevel.ToString();
+                        int spriteIndex = Mathf.Clamp(SeaweedManager.Instance.seaweeds[i].currentLevel / 10, 0, 2);
+                        tab.icon.sprite = seaweed.levelsIcon[spriteIndex];
+                        tab.level.text = $"lvl. {SeaweedManager.Instance.seaweeds[i].currentLevel.ToString()}";
                         tab.cost.text = SeaweedManager.Instance.seaweeds[i].GetUpgradeCost().ToString();
                     }
                     //if default UI
                     else
                     {
                         tab.icon.sprite = seaweed.levelsIcon[0];
-                        tab.level.text = "0";
+                        tab.level.text = "lvl. 0";
                         tab.cost.text = seaweed.baseCost.ToString();
                         tab.name.text = seaweed.seaweedName;
                     }
                 }
             }
+
+            //Fishs
+            FishData fishData = FishManager.Instance.fishData;
+            fishTab.cost.text = Mathf.RoundToInt(fishData.baseCost * Mathf.Pow(FishManager.Instance.activeFishes.Count + 1, fishData.costMultiplier)).ToString();
+            fishTab.cost.color = GameController.ResourcesManager.BubbleCount >= int.Parse(fishTab.cost.text)
+                ? Color.black
+                : Color.red;
         }
 
-        private bool IsRich(int index) => GameController.ResourcesManager.SpendBubbles(int.Parse(tabs[index].cost.text));
+        private bool IsRich(string cost) => GameController.ResourcesManager.SpendBubbles(long.Parse(cost));
         public void UpgradeSeaweed(int index)
         {
-            if (IsRich(index))
+            if (IsRich(tabs[index].cost.text))
             {
                 //Upgrade
                 if (SeaweedManager.Instance.seaweeds.Count > index)
@@ -75,19 +86,12 @@ namespace BubbleIdle.UI
             }
         }
         
-        public void BuyFish(int index)
+        public void BuyFish()
         {
-            if (IsRich(index))
+            if (IsRich(fishTab.cost.text))
             {
-                //Spawn Fish
-            }
-        }
-        
-        public void BuyCoral(int index)
-        {
-            if (IsRich(index))
-            {
-                //Add Coral
+                FishManager.Instance.SpawnFish();
+                UpdateUI();
             }
         }
     }

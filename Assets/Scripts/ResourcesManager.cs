@@ -6,9 +6,9 @@ namespace BubbleIdle
     public class ResourcesManager
     {
         public float ProductionBonus { get; private set; }
-        public int BubbleCount { get; private set; }
+        public long BubbleCount { get; private set; }
         
-        public void AddBubbles(int amount)
+        public void AddBubbles(long amount)
         {
             BubbleCount += amount;
             EventManager.Instance.ChangeMoney();
@@ -20,7 +20,7 @@ namespace BubbleIdle
             ProductionBonus += amount;
         }
 
-        public bool SpendBubbles(int amount)
+        public bool SpendBubbles(long amount)
         {
             Debug.Log($"Amount : {amount}");
             if (BubbleCount >= amount)

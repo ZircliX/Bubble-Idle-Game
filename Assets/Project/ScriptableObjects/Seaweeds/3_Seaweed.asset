@@ -21,8 +21,8 @@ MonoBehaviour:
   baseProduction: 25
   productionCooldown: 1
   speedMultiplier: 1.75
-  baseCost: 200
-  costMultiplier: 1.75
+  baseCost: 10000
+  costMultiplier: 1.25
   bubblePrefab: {fileID: 7850282121599577690, guid: 5764917c328d89e4a8abf18ec1797575, type: 3}
   bubbleValue: 25
   bubbleProductionRate: 3

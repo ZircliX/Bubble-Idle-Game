@@ -1,3 +1,4 @@
+using DG.Tweening;
 using UnityEngine;
 
 namespace BubbleIdle.FishSystem
@@ -6,12 +7,12 @@ namespace BubbleIdle.FishSystem
     {
         public FishData data { get; private set; }
         private SpriteRenderer sr;
-        Vector3 targetPosition = default;
+        Vector3 targetPosition;
 
         public virtual void Initialize(FishData data)
         {
             this.data = data;
-            sr = GetComponent<SpriteRenderer>();
+            sr = transform.GetChild(0).GetComponent<SpriteRenderer>();
             sr.sprite = data.fishIcon;
             GameController.ResourcesManager.AddProductionBonus(data.productionMultiplier);
         }
@@ -29,11 +30,21 @@ namespace BubbleIdle.FishSystem
             {
                 SetNewTargetPosition();
             }
+
+            UpdateRotation();
+        }
+        
+        private void UpdateRotation()
+        {
+            Vector3 direction = targetPosition - transform.position;
+
+            transform.LookAt(direction);
+            //transform.rotation = Quaternion.Euler(transform.rotation.x, 0, transform.rotation.z);
         }
 
         private void SetNewTargetPosition()
         {
-            targetPosition = new Vector3(Random.Range(-data.movementRange, data.movementRange), Random.Range(-data.movementRange, data.movementRange), transform.position.z);
+            targetPosition = new Vector3(Random.Range(-data.movementRange.x, data.movementRange.x), Random.Range(-data.movementRange.y, data.movementRange.y), transform.position.z);
         }
     }
 }

@@ -1,5 +1,4 @@
 using System;
-using BubbleIdle.SeaweedSystem;
 using LTX.Singletons;
 
 namespace BubbleIdle
