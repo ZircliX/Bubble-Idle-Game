@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      algue_basique_niv3_0: -5165121994822006414
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
