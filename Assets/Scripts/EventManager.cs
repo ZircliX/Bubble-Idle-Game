@@ -13,12 +13,12 @@ namespace BubbleIdle
         public void ClickBubble() => OnBubbleClick?.Invoke();
         
         //Seaweeds
-        public event Action<Seaweed> OnSeaweedBuy;
+        public event Action<int> OnSeaweedBuy;
         public event Action OnSeaweedBuySound;
 
-        public void BuySeaweed(Seaweed seaweed)
+        public void BuySeaweed(int seaweedIndex)
         {
-            OnSeaweedBuy?.Invoke(seaweed);
+            OnSeaweedBuy?.Invoke(seaweedIndex);
             OnSeaweedBuySound?.Invoke();
         }
 

@@ -10,19 +10,19 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3006ab7d3549d8a40960cf0441ec8a58, type: 3}
-  m_Name: 1_OrangeSeaweed
+  m_Name: 2_Seaweed
   m_EditorClassIdentifier: 
-  seaweedName: OrangeSeaweed
-  seaweedType: 0
+  seaweedName: PinkSeaweed
+  seaweedType: 1
   levelsIcon:
-  - {fileID: 21300000, guid: fa013bd791acad34daccb1a66d4016f6, type: 3}
-  - {fileID: 21300000, guid: a9df0193378f97c429083839540657c3, type: 3}
-  - {fileID: 21300000, guid: 6288cadb176861f4bac1e3deec736bf0, type: 3}
-  baseProduction: 5
-  productionCooldown: 2
-  speedMultiplier: 1.2
-  baseCost: 50
+  - {fileID: -6155237156775517172, guid: 71ec2dc6ab02ef84dae457dc7a85094e, type: 3}
+  - {fileID: 2642656099859607222, guid: 06f4c4b7a8e092b459650b1440d84812, type: 3}
+  - {fileID: -3156317884636717113, guid: 7181f7b481a30fb41aefe997e329ab86, type: 3}
+  baseProduction: 10
+  productionCooldown: 1.5
+  speedMultiplier: 1.5
+  baseCost: 300
   costMultiplier: 1.5
   bubblePrefab: {fileID: 7850282121599577690, guid: 5764917c328d89e4a8abf18ec1797575, type: 3}
-  bubbleValue: 5
-  bubbleProductionRate: 5
+  bubbleValue: 10
+  bubbleProductionRate: 3

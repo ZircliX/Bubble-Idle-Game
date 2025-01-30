@@ -36,6 +36,16 @@ namespace BubbleIdle.SaveSystem
             
             GameController.ResourcesManager.AddBubbles(saveFile.bubbles);
             seaweeds = saveFile.seaweeds;
+
+            //Calculate offline production
+            foreach (SeaweedSave newSeaweed in seaweeds)
+            {
+                float bubbleProductionRate = newSeaweed.seaweedData.baseProduction * Mathf.Pow(newSeaweed.seaweedLevel, newSeaweed.seaweedData.speedMultiplier);
+                bubbleProductionRate /= newSeaweed.seaweedData.productionCooldown;
+                int bubblesProduced = Mathf.RoundToInt(bubbleProductionRate * GameController.ProgressionManager.SecondsPassed);
+                GameController.ResourcesManager.AddBubbles(bubblesProduced);
+                //Debug.Log($"Seaweed {seaweedSave.seaweedData.seaweedType} produced {bubblesProduced} bubbles while offline.");
+            }
             
             Debug.Log("Read");
         }

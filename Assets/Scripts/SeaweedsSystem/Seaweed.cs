@@ -5,8 +5,8 @@ namespace BubbleIdle.SeaweedSystem
 {
     public class Seaweed : MonoBehaviour
     {
-        public SeaweedData data { get; private set; }
-        public int currentLevel { get; private set; }
+        public SeaweedData data { get; protected set; }
+        public int currentLevel { get; protected set; }
         private float productionTimer, bubbleTimer;
         private SpriteRenderer sr;
 

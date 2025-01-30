@@ -1,23 +1,21 @@
+using DG.Tweening;
 using UnityEngine;
-using UnityEngine.UI;
 
 public class PSS : MonoBehaviour
 {
-    [SerializeField] private Button button; // Reference to the button
-    [SerializeField] private Sprite activeIcon; // Icon when active
-    [SerializeField] private Sprite inactiveIcon; // Icon when inactive
+    [SerializeField] private RectTransform rt;
     [SerializeField] private bool isOn;
 
     public void ClickButton1()
     {
         if (!isOn)
         {
-            button.image.sprite = activeIcon; // Change icon to active
+            rt.DORotate(new Vector3(0, 0, 180), 0.5f).SetEase(Ease.OutBounce); // Change icon to active
             isOn = true;
         }
         else
         {
-            button.image.sprite = inactiveIcon; // Change icon to inactive
+            rt.DORotate(new Vector3(0, 0, 0), 0.5f).SetEase(Ease.OutBounce);
             isOn = false;
         }
     }
