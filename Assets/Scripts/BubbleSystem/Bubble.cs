@@ -1,12 +1,14 @@
+using BubbleIdle.SeaweedSystem;
 using DG.Tweening;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
 namespace BubbleIdle.BubbleSystem
 {
-    public class Bubble : MonoBehaviour, IPointerClickHandler
+    public class Bubble : MonoBehaviour, IPointerDownHandler
     {
-        private int bubbleValue;
+        private SeaweedData data;
+        private int seaweedLevel;
         
         [Header("Settings")]
         [SerializeField] private float moveDuration = 2f; // Durée totale du mouvement
@@ -15,10 +17,11 @@ namespace BubbleIdle.BubbleSystem
 
         private Vector3 initialPosition;
         
-        public void Initialize(int bubbleValue)
+        public void Initialize(SeaweedData data, int seaweedLevel)
         {
             EventManager.Instance.SpawnBubble();
-            this.bubbleValue = bubbleValue;
+            this.data = data;
+            this.seaweedLevel = seaweedLevel;
             initialPosition = transform.position;
             StartBubbleMovement();
         }
@@ -30,7 +33,7 @@ namespace BubbleIdle.BubbleSystem
             swingAmplitude += Random.Range(-0.8f, 0.8f);
             moveDuration += Random.Range(-5f, 2f);
             
-            transform.localScale = Vector3.one + Vector3.one * Random.Range(-0.3f, 0.3f);
+            transform.localScale = Vector3.one * 0.75f + Vector3.one * Random.Range(-0.3f, 0.3f);
             
             // Mouvement vertical principal
             transform.DOMoveY(initialPosition.y + 20f, moveDuration)
@@ -49,9 +52,17 @@ namespace BubbleIdle.BubbleSystem
                 }, 1f, moveDuration)
                 .SetEase(Ease.Linear);
         }
-        
-        public void OnPointerClick(PointerEventData eventData)
+
+        public void OnPointerDown(PointerEventData eventData)
         {
+            int value = Mathf.RoundToInt(data.bubbleValue * Mathf.Pow(seaweedLevel, data.costMultiplier));
+            
+            transform.DOKill();
+            VFXManager.Instance.PlayVFX("PopBubble", transform.position);
+            FeedbackCounter.Instance.SpawnCounter(transform.position, value);
+            
+            EventManager.Instance.ClickBubble();
+            GameController.ResourcesManager.AddBubbles(value.ToString());
             Destroy(gameObject);
         }
     }

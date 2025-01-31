@@ -10,24 +10,32 @@ namespace BubbleIdle
         
         private void OnEnable()
         {
-            EventManager.Instance.OnBubbleSpawn += () => PlayClip(nameof(EventManager.OnBubbleSpawn));
-            EventManager.Instance.OnBubbleClick += () => PlayClip(nameof(EventManager.OnBubbleClick));
+            //Bubbles
+            EventManager.Instance.OnBubbleSpawn += () => PlayClip(nameof(EventManager.Instance.OnBubbleSpawn));
+            EventManager.Instance.OnBubbleClick += () => PlayClip(nameof(EventManager.Instance.OnBubbleClick));
             
-            EventManager.Instance.OnSeaweedBuy += () => PlayClip(nameof(EventManager.OnSeaweedBuy));
-            EventManager.Instance.OnSeaweedUpgrade += () => PlayClip(nameof(EventManager.OnSeaweedUpgrade));
+            //Seaweeds
+            EventManager.Instance.OnSeaweedBuySound += () => PlayClip(nameof(EventManager.Instance.OnSeaweedBuySound));
+            EventManager.Instance.OnSeaweedUpgrade += () => PlayClip(nameof(EventManager.Instance.OnSeaweedUpgrade));
             
-            EventManager.Instance.OnMoneyAddSound += () => PlayClip(nameof(EventManager.OnMoneyAddSound));
+            //UI
+            EventManager.Instance.OnUIOpen += () => PlayClip(nameof(EventManager.Instance.OnUIOpen));
+
         }
 
-        private void PlayClip(string name)
+        private void PlayClip(string clipName)
         {
-            AudioClip clip = audioClips
-                .Where(data => data.name == name)
-                .Select(data => data.clip)
-                .FirstOrDefault();
+            AudioName clipData = audioClips
+                .FirstOrDefault(data => data.name == clipName);
 
-            audioSource.clip = clip;
-            audioSource.Play();
+            if (clipData.needPitch) audioSource.pitch = Random.Range(0.7f, 1.3f);
+            else audioSource.pitch = 1;
+            audioSource.volume = clipData.volume;
+
+            AudioClip clip;
+            if (clipData.clips.Length == 1) clip = clipData.clips[0];
+            else clip = clipData.clips[Random.Range(0, clipData.clips.Length)];
+            audioSource.PlayOneShot(clip);
         }
     }
 
@@ -35,6 +43,8 @@ namespace BubbleIdle
     public struct AudioName
     {
         public string name;
-        public AudioClip clip;
+        public AudioClip[] clips;
+        public bool needPitch;
+        [Range(0, 1)] public float volume;
     }
 }
