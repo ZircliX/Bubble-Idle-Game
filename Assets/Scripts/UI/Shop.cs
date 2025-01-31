@@ -43,7 +43,7 @@ namespace BubbleIdle.UI
                     SeaweedData seaweed = SeaweedManager.Instance.seaweedDatas[i];
                     
                     //if already bought
-                    if (SeaweedManager.Instance.seaweeds.Count > i)
+                    if (SeaweedManager.Instance.seaweeds.ContainsKey(i))
                     {
                         int spriteIndex = Mathf.Clamp(SeaweedManager.Instance.seaweeds[i].currentLevel / 10, 0, 2);
                         tab.icon.sprite = seaweed.levelsIcon[spriteIndex];
@@ -83,7 +83,7 @@ namespace BubbleIdle.UI
             if (IsRich(tabs[index].cost.text))
             {
                 //Upgrade
-                if (SeaweedManager.Instance.seaweeds.Count > index)
+                if (SeaweedManager.Instance.seaweeds.ContainsKey(index))
                 {
                     if (SeaweedManager.Instance.seaweeds[index].currentLevel == 20) return;
                     SeaweedManager.Instance.seaweeds[index].Upgrade();

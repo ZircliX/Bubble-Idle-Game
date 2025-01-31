@@ -1,3 +1,4 @@
+using DG.Tweening;
 using UnityEngine;
 
 namespace BubbleIdle.FishSystem
@@ -18,8 +19,9 @@ namespace BubbleIdle.FishSystem
 
         public void Refresh()
         {
-            Vector3 direction = targetPosition - transform.position;
-            if (direction != Vector3.zero)
+            transform.DOMove(targetPosition, data.speed * Time.deltaTime).SetEase(Ease.InCubic);
+            
+            if (Vector3.Distance(transform.position, targetPosition) <= 2)
             {
                 float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
                 transform.rotation = Quaternion.Euler(0, 0, angle);
@@ -43,7 +45,13 @@ namespace BubbleIdle.FishSystem
 
         private void SetNewTargetPosition()
         {
-            targetPosition = new Vector3(Random.Range(-data.movementRange.x, data.movementRange.x), Random.Range(-data.movementRange.y, data.movementRange.y), transform.position.z);
+            while (Vector3.Distance(transform.position, targetPosition) <= 5)
+            {
+                targetPosition = new Vector3(
+                    Random.Range(-data.movementRange.x, data.movementRange.x), 
+                    Random.Range(-data.movementRange.y, data.movementRange.y), 
+                    transform.position.z);
+            }
         }
     }
 }

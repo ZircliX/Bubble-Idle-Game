@@ -55,11 +55,13 @@ namespace BubbleIdle.BubbleSystem
 
         public void OnPointerDown(PointerEventData eventData)
         {
+            int value = Mathf.RoundToInt(data.bubbleValue * Mathf.Pow(seaweedLevel, data.costMultiplier));
+            
             transform.DOKill();
             VFXManager.Instance.PlayVFX("PopBubble", transform.position);
+            FeedbackCounter.Instance.SpawnCounter(transform.position, value);
             
             EventManager.Instance.ClickBubble();
-            int value = Mathf.RoundToInt(data.bubbleValue * Mathf.Pow(seaweedLevel, data.costMultiplier));
             GameController.ResourcesManager.AddBubbles(value.ToString());
             Destroy(gameObject);
         }

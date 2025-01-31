@@ -11,7 +11,8 @@ namespace BubbleIdle.SeaweedSystem
         [field : SerializeField] public SpecialSeaweed specialSeaweedPrefab { get; private set; }
         [field : SerializeField] public SeaweedData[] seaweedDatas { get; private set; }
         [field : SerializeField] public Transform[] seaweedsPos { get; private set; }
-        public List<Seaweed> seaweeds { get; private set; } = new List<Seaweed>();
+        [SerializeField] private Transform seaweedsParent;
+        public Dictionary<int, Seaweed> seaweeds { get; private set; } = new Dictionary<int, Seaweed>();
         
         protected override void Awake()
         {
@@ -23,9 +24,9 @@ namespace BubbleIdle.SeaweedSystem
 
         private void Update()
         {
-            foreach (Seaweed seaweed in seaweeds)
+            foreach (KeyValuePair<int, Seaweed> seaweed in seaweeds)
             {
-                seaweed.Refresh();
+                seaweed.Value.Refresh();
             }
         }
         
@@ -42,8 +43,9 @@ namespace BubbleIdle.SeaweedSystem
             }
             
             newSeaweed.Initialize(seaweedDatas[seaweedIndex], 1);
-            seaweeds.Add(newSeaweed);
+            seaweeds.Add(seaweedIndex, newSeaweed);
             newSeaweed.transform.position = seaweedsPos[newSeaweed.data.seaweedType].position;
+            newSeaweed.transform.SetParent(seaweedsParent);
             
             GameController.ProgressionManager.AddSeaweed(newSeaweed);
         }
@@ -60,12 +62,11 @@ namespace BubbleIdle.SeaweedSystem
                 else
                 {
                     newSeaweed = Instantiate(seaweedPrefab, seaweedSave.seaweedPosition, Quaternion.identity);
-                    
                 }
-                //Take saved seaweeds
-                seaweeds.Add(newSeaweed);
+
+                newSeaweed.transform.SetParent(seaweedsParent);
+                seaweeds.Add(seaweedSave.seaweedData.seaweedType, newSeaweed);
                 newSeaweed.Initialize(seaweedSave.seaweedData, seaweedSave.seaweedLevel);
-                EventManager.Instance.BuySeaweed(newSeaweed.data.seaweedType);
             }
         }
     }

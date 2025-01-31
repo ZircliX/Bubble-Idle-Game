@@ -23,6 +23,7 @@ namespace BubbleIdle.SaveSystem
             {
                 SeaweedSave seaweedSave = seaweeds[index];
                 seaweedSave.seaweedLevel = SeaweedManager.Instance.seaweeds[index].currentLevel;
+                seaweedSave.seaweedPosition = SeaweedManager.Instance.seaweeds[index].transform.position;
             }
 
             saveFile.productionBonus = GameController.ResourcesManager.ProductionBonus;
@@ -46,7 +47,7 @@ namespace BubbleIdle.SaveSystem
             //Calculate offline production
             foreach (SeaweedSave newSeaweed in seaweeds)
             {
-                float bubbleProductionRate = newSeaweed.seaweedData.baseProduction * Mathf.Pow(newSeaweed.seaweedLevel, newSeaweed.seaweedData.speedMultiplier);
+                float bubbleProductionRate = newSeaweed.seaweedData.baseProduction * Mathf.Pow(newSeaweed.seaweedLevel, newSeaweed.seaweedData.productionMultiplier);
                 bubbleProductionRate /= newSeaweed.seaweedData.productionCooldown;
                 double bubblesProduced = bubbleProductionRate * GameController.ProgressionManager.SecondsPassed;
                 int bubblesProducedRounded = Mathf.RoundToInt((float)bubblesProduced * saveFile.productionBonus);

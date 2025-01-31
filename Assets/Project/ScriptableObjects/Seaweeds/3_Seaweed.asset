@@ -18,11 +18,11 @@ MonoBehaviour:
   - {fileID: 21300000, guid: fa013bd791acad34daccb1a66d4016f6, type: 3}
   - {fileID: 21300000, guid: a9df0193378f97c429083839540657c3, type: 3}
   - {fileID: 21300000, guid: 6288cadb176861f4bac1e3deec736bf0, type: 3}
-  baseProduction: 25
+  baseProduction: 75
   productionCooldown: 1
-  speedMultiplier: 1.75
-  baseCost: 10000
-  costMultiplier: 1.25
+  productionMultiplier: 1.5
+  baseCost: 4000
+  costMultiplier: 1.4
   bubblePrefab: {fileID: 7850282121599577690, guid: 5764917c328d89e4a8abf18ec1797575, type: 3}
-  bubbleValue: 25
-  bubbleProductionRate: 2
+  bubbleValue: 50
+  bubbleProductionRate: 8

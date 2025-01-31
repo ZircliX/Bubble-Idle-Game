@@ -17,7 +17,7 @@ namespace BubbleIdle
         }
         public void AddBubbles(BigInteger amount)
         {
-            BubbleCount += amount;
+            BubbleCount += BigInteger.Abs(amount);
             EventManager.Instance.ChangeMoney();
         }
 

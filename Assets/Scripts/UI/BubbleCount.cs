@@ -20,7 +20,7 @@ namespace BubbleIdle.UI
 
         private void UpdateUI()
         {
-            bubbles.text = $"Bubble : {GameController.ResourcesManager.BubbleCount.ToString()}";
+            bubbles.text = $"{GameController.ResourcesManager.BubbleCount.ToString()}";
         }
     }
 }

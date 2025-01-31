@@ -53,13 +53,13 @@ namespace BubbleIdle.SeaweedSystem
         
         public int GetUpgradeCost(int nextLevel = 0)
         {
-            float nextLevelCost = data.baseCost * Mathf.Pow(currentLevel + nextLevel, data.costMultiplier);
+            float nextLevelCost = data.baseCost * Mathf.Pow(data.costMultiplier, currentLevel + nextLevel);
             return Mathf.RoundToInt(nextLevelCost);
         }
 
         public int GetProductionAtLevel(int nextLevel = 0)
         {
-            float nextLevelProduction = data.baseProduction * Mathf.Pow(currentLevel + nextLevel, data.speedMultiplier);
+            float nextLevelProduction = data.baseProduction * Mathf.Pow(data.productionMultiplier, currentLevel + nextLevel);
             return Mathf.RoundToInt(nextLevelProduction * GameController.ResourcesManager.ProductionBonus);
         }
     }
