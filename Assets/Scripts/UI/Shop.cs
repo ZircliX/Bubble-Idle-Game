@@ -33,10 +33,6 @@ namespace BubbleIdle.UI
             for (int i = 0; i < tabs.Length; i++)
             {
                 UITabShop tab = tabs[i];
-                if (tab.cost.text == "MAX") tab.cost.color = Color.black;
-                else tab.cost.color = GameController.ResourcesManager.BubbleCount >= int.Parse(tab.cost.text)
-                    ? Color.black
-                    : Color.red;
 
                 if (SeaweedManager.Instance.seaweedDatas.Length > i)
                 {
@@ -67,6 +63,11 @@ namespace BubbleIdle.UI
                         tab.name.text = seaweed.seaweedName;
                     }
                 }
+                
+                if (tab.cost.text == "MAX") tab.cost.color = Color.black;
+                else tab.cost.color = GameController.ResourcesManager.BubbleCount >= BigInteger.Parse(tab.cost.text)
+                    ? Color.black
+                    : Color.red;
             }
 
             //Fishs
@@ -102,6 +103,8 @@ namespace BubbleIdle.UI
             {
                 Debug.LogWarning("Not enough Money");
             }
+            
+            UpdateUI();
         }
         
         public void BuyFish()
@@ -109,9 +112,12 @@ namespace BubbleIdle.UI
             if (IsRich(fishTab.cost.text))
             {
                 GameController.ResourcesManager.SpendBubbles(fishTab.cost.text);
+                GameController.ProgressionManager.totalFishes++;
                 FishManager.Instance.SpawnFish();
                 UpdateUI();
             }
+            
+            UpdateUI();
         }
     }
 }

@@ -14,5 +14,10 @@ namespace BubbleIdle.UI
         {
             Application.Quit();
         }
+
+        public void Reset()
+        {
+            GameController.ResetData();
+        }
     }
 }

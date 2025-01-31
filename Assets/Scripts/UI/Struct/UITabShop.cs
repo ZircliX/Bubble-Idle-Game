@@ -1,4 +1,5 @@
 using TMPro;
+using UnityEngine;
 using UnityEngine.UI;
 
 namespace BubbleIdle.UI
@@ -10,7 +11,7 @@ namespace BubbleIdle.UI
         public TMP_Text level;
         public TMP_Text name;
         public TMP_Text cost;
-        public Image bubble;
+        public GameObject bubble;
         public Button button;
     }
 }
