@@ -14,7 +14,8 @@ namespace BubbleIdle.SaveSystem
                 seaweeds = new List<SeaweedSave>(),
                 quitTime = DateTime.Now.ToString("o"),
                 secondsPassed = 0f,
-                bubbles = 50
+                productionBonus = 1,
+                bubbles = "50"
             };
         }
     }

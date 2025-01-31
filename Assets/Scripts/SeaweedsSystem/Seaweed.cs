@@ -5,18 +5,19 @@ namespace BubbleIdle.SeaweedSystem
 {
     public class Seaweed : MonoBehaviour
     {
-        public SeaweedData data { get; private set; }
-        public int currentLevel { get; private set; }
+        public SeaweedData data { get; protected set; }
+        public int currentLevel { get; protected set; }
         private float productionTimer, bubbleTimer;
-        private SpriteRenderer sr;
+        protected SpriteRenderer sr;
 
         public virtual void Initialize(SeaweedData data, int level = 0)
         {
             this.data = data;
             this.currentLevel = level;
 
-            sr = GetComponent<SpriteRenderer>();
-            sr.sprite = data.levelsIcon[0];
+            sr = transform.GetChild(0).GetComponent<SpriteRenderer>();
+            int spriteIndex = Mathf.Clamp(level / 10, 0, 2);
+            sr.sprite = data.levelsIcon[spriteIndex];
         }
 
         public virtual void Refresh()
@@ -24,7 +25,7 @@ namespace BubbleIdle.SeaweedSystem
             productionTimer += Time.deltaTime;
             if (productionTimer >= data.productionCooldown)
             {
-                GameController.ResourcesManager.AddBubbles(GetProductionAtLevel());
+                GameController.ResourcesManager.AddBubbles(GetProductionAtLevel().ToString());
                 productionTimer = 0;
             }
 
@@ -40,24 +41,25 @@ namespace BubbleIdle.SeaweedSystem
         {
             Bubble newBubble = Instantiate(data.bubblePrefab);
             newBubble.transform.position = transform.position;
-            newBubble.Initialize(data.bubbleValue);
+            newBubble.Initialize(data, currentLevel);
         }
 
         public virtual void Upgrade()
         {
             currentLevel++;
-            sr.sprite = data.levelsIcon[currentLevel / 10];
+            int spriteIndex = Mathf.Clamp(currentLevel / 10, 0, 2);
+            sr.sprite = data.levelsIcon[spriteIndex];
         }
         
         public int GetUpgradeCost(int nextLevel = 0)
         {
-            float nextLevelCost = data.baseCost * Mathf.Pow(currentLevel + nextLevel, data.costMultiplier);
+            float nextLevelCost = data.baseCost * Mathf.Pow(data.costMultiplier, currentLevel + nextLevel);
             return Mathf.RoundToInt(nextLevelCost);
         }
 
         public int GetProductionAtLevel(int nextLevel = 0)
         {
-            float nextLevelProduction = data.baseProduction * Mathf.Pow(currentLevel + nextLevel, data.speedMultiplier);
+            float nextLevelProduction = data.baseProduction * Mathf.Pow(data.productionMultiplier, currentLevel + nextLevel);
             return Mathf.RoundToInt(nextLevelProduction * GameController.ResourcesManager.ProductionBonus);
         }
     }

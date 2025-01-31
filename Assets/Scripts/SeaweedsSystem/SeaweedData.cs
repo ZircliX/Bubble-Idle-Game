@@ -14,7 +14,7 @@ namespace BubbleIdle.SeaweedSystem
         [Header("Production")]
         public float baseProduction;
         public float productionCooldown;
-        public float speedMultiplier;
+        public float productionMultiplier;
 
         [Header("Upgrades")] 
         public int baseCost;
@@ -24,12 +24,5 @@ namespace BubbleIdle.SeaweedSystem
         public Bubble bubblePrefab;
         public int bubbleValue;
         public float bubbleProductionRate;
-        
-      
     }
 }
-
-/*
-Pas de specialSeaweedData
-au lieu d'utiliser boostMultiplier : utiliser data.baseProduction
-*/

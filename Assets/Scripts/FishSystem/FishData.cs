@@ -17,7 +17,7 @@ namespace BubbleIdle.FishSystem
         public float costMultiplier;
         
         [Header("Movement & Behavior")]
-        public float speed;
-        public float movementRange;
+        public float speed = 0.8f;
+        public Vector2 movementRange = new Vector2(15f, 7.25f);
     }
 }
