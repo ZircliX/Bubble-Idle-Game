@@ -25,7 +25,7 @@ namespace BubbleIdle.SaveSystem
         {
             if (settings is SaveSettings sampleSaveSettings)
             {
-                string json = JsonUtility.ToJson(save);
+                string json = JsonUtility.ToJson(save, true);
                 PlayerPrefs.SetString(sampleSaveSettings.prefName, json);
             }
 

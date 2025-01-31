@@ -10,6 +10,7 @@ namespace BubbleIdle.SaveSystem
         public int Version => 1;
 
         [SerializeField] public List<SeaweedSave> seaweeds;
+        [SerializeField] public int totalFishes;
         [SerializeField] public string quitTime;
         [SerializeField] public float secondsPassed;
         [SerializeField] public float productionBonus;

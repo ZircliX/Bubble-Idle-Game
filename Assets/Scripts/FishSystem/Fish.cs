@@ -19,28 +19,21 @@ namespace BubbleIdle.FishSystem
 
         public void Refresh()
         {
-            transform.DOMove(targetPosition, data.speed * Time.deltaTime).SetEase(Ease.InCubic);
-            
-            if (Vector3.Distance(transform.position, targetPosition) <= 2)
-            {
-                float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
-                transform.rotation = Quaternion.Euler(0, 0, angle);
-            }
-            transform.position = Vector3.MoveTowards(transform.position, targetPosition, data.speed * Time.deltaTime);
-            if (Vector3.Distance(transform.position, targetPosition) <= 1)
+            transform.DOMove(targetPosition, data.speed * 0.5f).SetEase(Ease.OutQuad);
+
+            if (Vector3.Distance(transform.position, targetPosition) <= 3)
             {
                 SetNewTargetPosition();
             }
-
+            
             UpdateRotation();
         }
-        
+
         private void UpdateRotation()
         {
             Vector3 direction = targetPosition - transform.position;
 
             transform.LookAt(direction);
-            //transform.rotation = Quaternion.Euler(transform.rotation.x, 0, transform.rotation.z);
         }
 
         private void SetNewTargetPosition()

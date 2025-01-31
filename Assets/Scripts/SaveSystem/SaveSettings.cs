@@ -12,6 +12,7 @@ namespace BubbleIdle.SaveSystem
             return new SaveFile()
             {
                 seaweeds = new List<SeaweedSave>(),
+                totalFishes = 0,
                 quitTime = DateTime.Now.ToString("o"),
                 secondsPassed = 0f,
                 productionBonus = 1,
