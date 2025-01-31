@@ -5,37 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8839afc5-71b1-4a18-bfd4-07041f30b142" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/DriedSeaweedSystem.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/DriedSeaweedSystem/Dried.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/DriedSeaweedSystem/Dried.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/DriedSeaweedSystem/DriedSeaweedSpawner.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/DriedSeaweedSystem/DriedSeaweedSpawner.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Bubble-Idle Game/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Bubble-Idle Game/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/Prefabs/Manager/AudioManager.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/Prefabs/Manager/AudioManager.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/Prefabs/Manager/SeaweedManager.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/Prefabs/Manager/SeaweedManager.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/Prefabs/UI/Canvas.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/Prefabs/UI/Canvas.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/Textures/Final/Algue Basique/algue_basique_niv2.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/Textures/Final/Algue Basique/algue_basique_niv2.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/Textures/Final/Algue Rose/algue_rose_niv1.PNG.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/Textures/Final/Algue Rose/algue_rose_niv1.PNG.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/Textures/Final/Algue Rose/algue_rose_niv2.PNG.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/Textures/Final/Algue Rose/algue_rose_niv2.PNG.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Project/Textures/Final/Algue Rose/algue_rose_niv3.PNG.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/Textures/Final/Algue Rose/algue_rose_niv3.PNG.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Menu.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Menu.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/ZircliX-Scene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/ZircliX-Scene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/FishSystem/Fish.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/FishSystem/Fish.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/DriedSeaweedSystem/Dried.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/DriedSeaweedSystem/Dried.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/DriedSeaweedSystem/DriedSeaweedSpawner.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/DriedSeaweedSystem/DriedSeaweedSpawner.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/FishSystem/FishManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/FishSystem/FishManager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ResourcesManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ResourcesManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SaveSystem/Listeners/ProgressionManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SaveSystem/Listeners/ProgressionManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SaveSystem/SaveFile.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SaveSystem/SaveFile.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SaveSystem/SaveManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SaveSystem/SaveManager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/SaveSystem/SaveSettings.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SaveSystem/SaveSettings.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SaveSystem/SeaweedSave.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SaveSystem/SeaweedSave.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SeaweedsSystem/SeaweedManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SeaweedsSystem/SeaweedManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/MainMenu.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/MainMenu.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/Shop.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/Shop.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/Struct/UITabShop.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/Struct/UITabShop.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UniversalRenderPipelineGlobalSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/UniversalRenderPipelineGlobalSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/BubbleCount.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/BubbleCount.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/PanelSlide.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/PanelSlide.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
