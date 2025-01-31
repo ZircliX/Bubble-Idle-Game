@@ -7,6 +7,12 @@ namespace BubbleIdle
     {
         public float ProductionBonus { get; private set; } = 1;
         public BigInteger BubbleCount { get; private set; }
+        public int DriedCount { get; private set; }
+
+        public void AddDried(int amount)
+        {
+            DriedCount += amount;
+        }
         
         public void AddBubbles(string amount)
         {

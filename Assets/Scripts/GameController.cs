@@ -8,6 +8,7 @@ namespace BubbleIdle
     public static class GameController
     {
         public static event Action OnGameSave;
+        public static event Action OnGameLoad;
         
         public static ProgressionManager ProgressionManager { get; private set; }
         public static ResourcesManager ResourcesManager { get; private set; }
@@ -24,16 +25,20 @@ namespace BubbleIdle
         }
         
         [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.BeforeSceneLoad)]
-        private static void Load()
+        private static void LoadSetup()
         {
             Application.targetFrameRate = 60;
             Application.quitting += UnLoad;
             
             ResourcesManager = new ResourcesManager();
             ProgressionManager = new ProgressionManager();
+        }
+        
+        [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.AfterSceneLoad)]
+        private static void LoadAfterSetup()
+        {
             Save.AddListener(ProgressionManager);
             Save.SetSaveManager(new SaveManager());
-
             LoadProgress();
         }
 
@@ -56,13 +61,23 @@ namespace BubbleIdle
             OnGameSave?.Invoke();
         }
 
-        private static void LoadProgress()
+        public static void LoadProgress()
         {
             Debug.Log("Loading player progress");
             Save.Pull<SaveFile, SaveSettings>(out _, new SaveSettings()
             {
                 prefName = "Player"
             });
+            OnGameLoad?.Invoke();
+        }
+
+        public static void ResetData()
+        {
+            PlayerPrefs.DeleteAll();
+            PlayerPrefs.Save();
+            
+            ResourcesManager = new ResourcesManager();
+            ProgressionManager = new ProgressionManager();
         }
     }
 }
