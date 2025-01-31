@@ -1,4 +1,5 @@
 using System;
+using System.Security.Cryptography;
 using BubbleIdle.SaveSystem;
 using SaveSystem.Core;
 using UnityEngine;
@@ -73,11 +74,15 @@ namespace BubbleIdle
 
         public static void ResetData()
         {
+            Save.RemoveListener(ProgressionManager);
             PlayerPrefs.DeleteAll();
             PlayerPrefs.Save();
             
             ResourcesManager = new ResourcesManager();
             ProgressionManager = new ProgressionManager();
+            
+            Save.AddListener(ProgressionManager);
+            Save.SetSaveManager(new SaveManager());
         }
     }
 }

@@ -42,8 +42,17 @@ namespace BubbleIdle.SaveSystem
         public void Read(in SaveFile saveFile)
         {
             seaweeds.Clear();
+            DateTime savedTime;
 
-            DateTime savedTime = DateTime.Parse(saveFile.quitTime);
+            if (saveFile.quitTime == null)
+            {
+                savedTime = DateTime.Now;
+            }
+            else
+            {
+                
+                savedTime = DateTime.Parse(saveFile.quitTime);
+            }
             DateTime currentTime = DateTime.Now;
             TimeSpan timePassed = currentTime - savedTime;
             SecondsPassed = timePassed.TotalSeconds;
