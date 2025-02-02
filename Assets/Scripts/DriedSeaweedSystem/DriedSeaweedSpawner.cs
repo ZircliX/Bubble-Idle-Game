@@ -7,16 +7,17 @@ namespace BubbleIdle.DriedSeaweedSystem
     {
         [SerializeField] private GameObject prefab;
         [SerializeField] private Transform spawnPoint;
+        [SerializeField] private float spawnCooldown;
         
         private IEnumerator Start()
         {
             while (true)
             {
                 Vector3 spawnPos = spawnPoint.position;
-                spawnPos.y += Random.Range(-8, 8);
+                spawnPos.y += Random.Range(-10f, 10);
                 Instantiate(prefab, spawnPos, Quaternion.identity);
 
-                yield return new WaitForSeconds(2f);
+                yield return new WaitForSeconds(spawnCooldown);
             }
         }
     }

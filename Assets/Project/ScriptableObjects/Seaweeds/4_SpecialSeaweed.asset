@@ -22,7 +22,7 @@ MonoBehaviour:
   productionCooldown: 0
   productionMultiplier: 0
   baseCost: 5000
-  costMultiplier: 2
+  costMultiplier: 1.8
   bubblePrefab: {fileID: 0}
   bubbleValue: 0
   bubbleProductionRate: 0

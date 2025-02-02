@@ -20,7 +20,7 @@ namespace BubbleIdle.DriedSeaweedSystem
         {
             if (!isDrag)
             {
-               transform.Translate(Vector3.right * Time.deltaTime * 5f);
+               transform.Translate(Vector3.right * (Time.deltaTime * 5f));
             }
         }
 

@@ -72,5 +72,11 @@ namespace BubbleIdle.SeaweedSystem
                 newSeaweed.Initialize(seaweedDatas[seaweedSave.typeIndex], seaweedSave.seaweedLevel);
             }
         }
+
+        public int GetDefaultCost(int index)
+        {
+            SeaweedData data = seaweedDatas[index];
+            return Mathf.RoundToInt(data.baseCost * Mathf.Pow(data.costMultiplier, 0));
+        }
     }
 }
