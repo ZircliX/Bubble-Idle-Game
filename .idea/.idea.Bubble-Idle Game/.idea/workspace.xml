@@ -5,15 +5,29 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8839afc5-71b1-4a18-bfd4-07041f30b142" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/StaticTools.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/StaticTools.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Bubble-Idle Game/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Bubble-Idle Game/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Project/Prefabs/Fish.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/Prefabs/Fish.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Project/ScriptableObjects/Fishs/FishData.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/ScriptableObjects/Fishs/FishData.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Project/ScriptableObjects/Seaweeds/4_SpecialSeaweed.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Project/ScriptableObjects/Seaweeds/4_SpecialSeaweed.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Project/Textures/Tuto/Tuto 1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Project/Textures/Tuto/Tuto 1.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Project/Textures/Tuto/tuto 2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Project/Textures/Tuto/tuto 2.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Project/Textures/Tuto/tuto 3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Project/Textures/Tuto/tuto 3.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Menu.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Menu.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Tuto.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Tuto.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/ZircliX-Scene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/ZircliX-Scene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/DriedSeaweedSystem/Dried.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/DriedSeaweedSystem/Dried.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/DriedSeaweedSystem/DriedSeaweedSpawner.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/DriedSeaweedSystem/DriedSeaweedSpawner.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/FishSystem/FishManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/FishSystem/FishManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/FishSystem/Fish.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/FishSystem/Fish.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ResourcesManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ResourcesManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SaveSystem/Listeners/ProgressionManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SaveSystem/Listeners/ProgressionManager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/SaveSystem/SaveSettings.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SaveSystem/SaveSettings.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SeaweedsSystem/SeaweedManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SeaweedsSystem/SeaweedManager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/BubbleCount.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/BubbleCount.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/PanelSlide.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/PanelSlide.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/Shop.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/Shop.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/UniversalRenderPipelineGlobalSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/UniversalRenderPipelineGlobalSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -69,7 +83,7 @@
 }</component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
     <configuration name="Standalone Player" type="RunUnityExe" factoryName="Unity Executable">
-      <option name="EXE_PATH" value="$PROJECT_DIR$/../../Unity Builds/AquaticBloom/V2\AquaticBloom.exe" />
+      <option name="EXE_PATH" value="$PROJECT_DIR$/../../Unity Builds/AquaticBloom/update1\AquaticBloom.exe" />
       <option name="PROGRAM_PARAMETERS" value="" />
       <option name="WORKING_DIRECTORY" value="C:\Users\lolof\Documents\Unity Builds\AquaticBloom\V1" />
       <option name="PASS_PARENT_ENVS" value="1" />
@@ -135,6 +149,7 @@
       <workItem from="1738319209802" duration="264000" />
       <workItem from="1738319494714" duration="7674000" />
       <workItem from="1738329237629" duration="2193000" />
+      <workItem from="1738427937920" duration="7878000" />
     </task>
     <servers />
   </component>

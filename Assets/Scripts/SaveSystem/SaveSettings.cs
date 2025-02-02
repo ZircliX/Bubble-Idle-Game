@@ -16,7 +16,7 @@ namespace BubbleIdle.SaveSystem
                 quitTime = DateTime.Now.ToString("o"),
                 secondsPassed = 0f,
                 productionBonus = 1,
-                bubbles = "5000000"
+                bubbles = "50"
             };
         }
     }
