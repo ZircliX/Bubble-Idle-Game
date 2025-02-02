@@ -14,14 +14,11 @@ namespace BubbleIdle.FishSystem
         {
             base.Awake();
             Debug.Log($"Time since last login : {GameController.ProgressionManager.SecondsPassed} seconds");
-
-            GameController.OnGameLoad += () =>
+            
+            for (int i = 0; i < GameController.ProgressionManager.totalFishes; i++)
             {
-                for (int i = 0; i < GameController.ProgressionManager.totalFishes; i++)
-                {
-                    SpawnFish();
-                }
-            };
+                SpawnFish();
+            }
         }
         
         public void SpawnFish()

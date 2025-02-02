@@ -1,3 +1,5 @@
+using System;
+using System.Numerics;
 using TMPro;
 using UnityEngine;
 
@@ -17,10 +19,10 @@ namespace BubbleIdle.UI
         {
             EventManager.Instance.OnMoneyChange -= UpdateUI;
         }
-
+        
         private void UpdateUI()
         {
-            bubbles.text = $"{GameController.ResourcesManager.BubbleCount.ToString()}";
+            bubbles.text = StaticTools.FormatNumber(GameController.ResourcesManager.BubbleCount);
         }
     }
 }

@@ -47,74 +47,82 @@ namespace BubbleIdle.UI
                         if (SeaweedManager.Instance.seaweeds[i].currentLevel == 20)
                         {
                             tab.cost.text = "MAX";
+                            tab.cost.color = Color.black;
                             Destroy(tab.bubble);
                         }
                         else
                         {
-                            tab.cost.text = SeaweedManager.Instance.seaweeds[i].GetUpgradeCost().ToString();
+                            tab.cost.color = Color.black;
+                            if (SeaweedManager.Instance.seaweeds[i].GetUpgradeCost() <= GameController.ResourcesManager.BubbleCount)
+                                tab.cost.color = Color.black;
+                            else
+                                tab.cost.color = Color.red;
+                            
+                            tab.cost.text = StaticTools.FormatNumber(SeaweedManager.Instance.seaweeds[i].GetUpgradeCost());
                         }
                     }
                     //if default UI
                     else
                     {
+                        if (SeaweedManager.Instance.GetDefaultCost(i) <= GameController.ResourcesManager.BubbleCount)
+                            tab.cost.color = Color.black;
+                        else
+                            tab.cost.color = Color.red;
+                        
                         tab.icon.sprite = seaweed.levelsIcon[0];
                         tab.level.text = "lvl. 0";
-                        tab.cost.text = seaweed.baseCost.ToString();
+                        tab.cost.text = StaticTools.FormatNumber(seaweed.baseCost);
                         tab.name.text = seaweed.seaweedName;
                     }
                 }
-                
-                if (tab.cost.text == "MAX") tab.cost.color = Color.black;
-                else tab.cost.color = GameController.ResourcesManager.BubbleCount >= BigInteger.Parse(tab.cost.text)
-                    ? Color.black
-                    : Color.red;
             }
 
             //Fishs
             FishData fishData = FishManager.Instance.fishData;
-            fishTab.cost.text = Mathf.RoundToInt(fishData.baseCost * Mathf.Pow(FishManager.Instance.activeFishes.Count + 1, fishData.costMultiplier)).ToString();
-            fishTab.cost.color = GameController.ResourcesManager.BubbleCount >= int.Parse(fishTab.cost.text)
+            fishTab.cost.text = StaticTools.FormatNumber(Mathf.RoundToInt(fishData.baseCost * Mathf.Pow(FishManager.Instance.activeFishes.Count + 1, fishData.costMultiplier)));
+            fishTab.cost.color = GameController.ResourcesManager.BubbleCount >= Mathf.RoundToInt(fishData.baseCost * Mathf.Pow(FishManager.Instance.activeFishes.Count + 1, fishData.costMultiplier))
                 ? Color.black
                 : Color.red;
         }
 
-        private bool IsRich(string cost) => BigInteger.Parse(cost) <= GameController.ResourcesManager.BubbleCount;
+        private bool IsRich(int cost) => cost <= GameController.ResourcesManager.BubbleCount;
         public void UpgradeSeaweed(int index)
         {
-            if (IsRich(tabs[index].cost.text))
+            //Upgrade
+            if (SeaweedManager.Instance.seaweeds.ContainsKey(index))
             {
-                //Upgrade
-                if (SeaweedManager.Instance.seaweeds.ContainsKey(index))
-                {
-                    if (SeaweedManager.Instance.seaweeds[index].currentLevel == 20) return;
-                    SeaweedManager.Instance.seaweeds[index].Upgrade();
-                    EventManager.Instance.UpgradeSeaweed();
-                }
-                //Buy
-                else
-                {
-                    SeaweedManager.Instance.AddSeaweed(index);
-                    EventManager.Instance.BuySeaweed(index);
-                }
-
-                GameController.ResourcesManager.SpendBubbles(tabs[index].cost.text);
+                if (!IsRich(SeaweedManager.Instance.seaweeds[index].GetUpgradeCost())) return;
+                
+                if (SeaweedManager.Instance.seaweeds[index].currentLevel == 20) return;
+                GameController.ResourcesManager.SpendBubbles(SeaweedManager.Instance.seaweeds[index].GetUpgradeCost());
+                SeaweedManager.Instance.seaweeds[index].Upgrade();
+                EventManager.Instance.UpgradeSeaweed();
             }
+            //Buy
             else
             {
-                Debug.LogWarning("Not enough Money");
+                if (!IsRich(SeaweedManager.Instance.GetDefaultCost(index))) return;
+                
+                GameController.ResourcesManager.SpendBubbles(SeaweedManager.Instance.GetDefaultCost(index));
+                SeaweedManager.Instance.AddSeaweed(index);
+                EventManager.Instance.BuySeaweed(index);
             }
-            
+        
             UpdateUI();
         }
         
         public void BuyFish()
         {
-            if (IsRich(fishTab.cost.text))
+            FishData fishData = FishManager.Instance.fishData;
+            int cost = Mathf.RoundToInt(fishData.baseCost *
+                                        Mathf.Pow(FishManager.Instance.activeFishes.Count + 1,
+                                            fishData.costMultiplier));
+            
+            if (IsRich(cost))
             {
-                GameController.ResourcesManager.SpendBubbles(fishTab.cost.text);
+                GameController.ResourcesManager.SpendBubbles(cost);
                 GameController.ProgressionManager.totalFishes++;
                 FishManager.Instance.SpawnFish();
-                UpdateUI();
             }
             
             UpdateUI();

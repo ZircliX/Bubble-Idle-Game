@@ -16,6 +16,6 @@ MonoBehaviour:
   fishIcon: {fileID: 21300000, guid: 856d499448718884d920abcb83ed1043, type: 3}
   productionMultiplier: 0.05
   baseCost: 5000
-  costMultiplier: 1.5
+  costMultiplier: 5
   speed: 15
-  movementRange: {x: 15, y: 7.25}
+  movementRange: {x: 25, y: 15}

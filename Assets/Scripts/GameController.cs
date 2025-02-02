@@ -83,6 +83,8 @@ namespace BubbleIdle
             
             Save.AddListener(ProgressionManager);
             Save.SetSaveManager(new SaveManager());
+            
+            LoadProgress();
         }
     }
 }

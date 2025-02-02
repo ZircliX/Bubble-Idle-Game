@@ -32,29 +32,20 @@ namespace BubbleIdle
             ProductionBonus += amount;
         }
 
-        public bool SpendBubbles(string amount)
+        public void SpendBubbles(string amount)
         {
-            if (BigInteger.TryParse(amount, out BigInteger result))
-            {
-                return SpendBubbles(result);
-            }
-            else
-            {
-                return false;
-            }
+            SpendBubbles(BigInteger.Parse(amount));
         }
-        public bool SpendBubbles(BigInteger amount)
+        public void SpendBubbles(BigInteger amount)
         {
             if (BubbleCount >= amount)
             {
                 BubbleCount -= amount;
                 EventManager.Instance.ChangeMoney();
-                return true;
             }
             else
             {
                 Debug.LogWarning("Not enough bubbles noob!");
-                return false;
             }
         }
     }
