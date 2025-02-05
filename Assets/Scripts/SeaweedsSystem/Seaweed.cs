@@ -9,7 +9,7 @@ namespace BubbleIdle.SeaweedSystem
     {
         public SeaweedData data { get; protected set; }
         public int currentLevel { get; protected set; }
-        private float productionTimer, bubbleTimer;
+        protected float productionTimer, bubbleTimer;
         protected SpriteRenderer sr;
 
         public virtual void Initialize(SeaweedData data, int level = 0)

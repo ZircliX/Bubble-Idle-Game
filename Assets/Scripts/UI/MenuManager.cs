@@ -33,7 +33,7 @@ namespace BubbleIdle.Core.UI
             }
 
             // Apply a new shake effect
-            shakeTween = info.parent.transform.DOShakeScale(0.2f, 0.5f)
+            shakeTween = info.parent.transform.DOShakeScale(0.1f, 0.2f)
                 .OnComplete(() => shakeTween = null); // Clear the tween reference when done
             
             UpdateUI();

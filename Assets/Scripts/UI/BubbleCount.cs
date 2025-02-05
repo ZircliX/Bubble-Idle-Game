@@ -8,7 +8,7 @@ namespace BubbleIdle.UI
     public class BubbleCount : MonoBehaviour
     {
         [SerializeField] private TMP_Text bubbles;
-        [SerializeField] private TMP_Text speicalBubbles;
+        [SerializeField] private TMP_Text specialBubbles;
 
         private void OnEnable()
         {
@@ -24,7 +24,7 @@ namespace BubbleIdle.UI
         private void UpdateUI()
         {
             bubbles.text = StaticTools.FormatNumber(GameController.ResourcesManager.BubbleCount);
-            speicalBubbles.text = StaticTools.FormatNumber(GameController.ResourcesManager.SpecialBubbleCount);
+            specialBubbles.text = StaticTools.FormatNumber(GameController.ResourcesManager.SpecialBubbleCount);
         }
     }
 }

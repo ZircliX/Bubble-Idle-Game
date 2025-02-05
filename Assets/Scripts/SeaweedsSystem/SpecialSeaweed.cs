@@ -5,8 +5,6 @@ namespace BubbleIdle.SeaweedSystem
 {
     public class SpecialSeaweed : Seaweed
     {
-        private float bubbleTimer;
-        
         public override void Initialize(SeaweedData data, int level = 0)
         {
             this.data = data;

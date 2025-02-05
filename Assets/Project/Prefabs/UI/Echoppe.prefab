@@ -803,7 +803,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 6886956189128048793}
   m_Direction: 2
   m_Value: 1
-  m_Size: 0.52153075
+  m_Size: 0.6087907
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -4479,10 +4479,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   panel: {fileID: 3531302867054845690}
-  distanceOn: -960
-  distanceOff: -1758
+  distanceOn: -1188
+  distanceOff: -1993
   speed: 0.6
-  hoverOffset: 20
+  hoverOffset: 50
   hoverDuration: 0.3
   isOn: 0
   isHovering: 0
@@ -6614,7 +6614,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -0.00002042154}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &4109398660925119032
@@ -8003,7 +8003,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -78.96, y: 77.704}
+  m_AnchoredPosition: {x: -78.96002, y: 77.70401}
   m_SizeDelta: {x: -335.2, y: 782.3}
   m_Pivot: {x: 0.5, y: 0}
 --- !u!222 &6255407059216022209
