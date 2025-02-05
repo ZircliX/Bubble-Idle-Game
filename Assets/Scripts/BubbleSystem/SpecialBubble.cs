@@ -5,19 +5,9 @@ using UnityEngine.EventSystems;
 
 namespace BubbleIdle.BubbleSystem
 {
-    public class Bubble : MonoBehaviour, IPointerDownHandler
+    public class SpecialBubble : Bubble
     {
-        protected SeaweedData data;
-        protected int seaweedLevel;
-        
-        [Header("Settings")]
-        [SerializeField] protected float moveDuration = 10f; // Durée totale du mouvement
-        [SerializeField] protected float swingAmplitude = 1f; // Amplitude du balancement
-        [SerializeField] protected float swingSpeed = 30f; // Vitesse du balancement
-
-        protected Vector3 initialPosition;
-        
-        public virtual void Initialize(SeaweedData data, int seaweedLevel)
+        public override void Initialize(SeaweedData data, int seaweedLevel)
         {
             EventManager.Instance.SpawnBubble();
             this.data = data;
@@ -27,18 +17,19 @@ namespace BubbleIdle.BubbleSystem
             transform.StartBubbleMovement(initialPosition, moveDuration, swingAmplitude, swingSpeed);
             Destroy(gameObject, moveDuration);
         }
-
-        public virtual void OnPointerDown(PointerEventData eventData)
+        
+        public override void OnPointerDown(PointerEventData eventData)
         {
-            int value = Mathf.RoundToInt(data.bubbleValue * Mathf.Pow(data.costMultiplier, seaweedLevel));
+            int value = Mathf.RoundToInt(data.bubbleValue);
             
             transform.DOKill();
             VFXManager.Instance.PlayVFX("PopBubble", transform.position);
             FeedbackCounter.Instance.SpawnCounter(transform.position, value);
             
             EventManager.Instance.ClickBubble();
-            GameController.ResourcesManager.AddBubbles(value.ToString());
+            GameController.ResourcesManager.AddSpecialBubbles(value);
             Destroy(gameObject);
         }
     }
+    
 }

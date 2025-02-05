@@ -16,5 +16,6 @@ namespace BubbleIdle.SaveSystem
         [SerializeField] public float productionBonus;
         
         [SerializeField] public string bubbles;
+        [SerializeField] public string specialBubbles;
     }
 }

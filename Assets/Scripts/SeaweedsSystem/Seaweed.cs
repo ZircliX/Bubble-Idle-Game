@@ -39,7 +39,7 @@ namespace BubbleIdle.SeaweedSystem
             }
         }
 
-        private void ProduceBubble()
+        protected virtual void ProduceBubble()
         {
             Bubble newBubble = Instantiate(data.bubblePrefab);
             newBubble.transform.position = transform.position;

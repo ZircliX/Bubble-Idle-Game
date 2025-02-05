@@ -23,6 +23,6 @@ MonoBehaviour:
   productionMultiplier: 0
   baseCost: 5000
   costMultiplier: 1.6
-  bubblePrefab: {fileID: 0}
-  bubbleValue: 0
-  bubbleProductionRate: 120
+  bubblePrefab: {fileID: -7136097801375626401, guid: c442138d79cb40b469b95671b27c6656, type: 3}
+  bubbleValue: 1
+  bubbleProductionRate: 3
