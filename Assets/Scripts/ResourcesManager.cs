@@ -7,6 +7,8 @@ namespace BubbleIdle
     {
         public float ProductionBonus { get; private set; } = 1;
         public BigInteger BubbleCount { get; private set; }
+        
+        public int SpecialBubbleCount { get; private set; }
         public int DriedCount { get; private set; }
 
         public void AddDried(int amount)
@@ -24,6 +26,12 @@ namespace BubbleIdle
         public void AddBubbles(BigInteger amount)
         {
             BubbleCount += BigInteger.Abs(amount);
+            EventManager.Instance.ChangeMoney();
+        }
+
+        public void AddSpecialBubbles(int amount)
+        {
+            SpecialBubbleCount += amount;
             EventManager.Instance.ChangeMoney();
         }
 

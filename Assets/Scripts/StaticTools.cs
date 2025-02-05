@@ -1,8 +1,8 @@
-using System;
-using System.Collections.Generic;
-using System.Globalization;
 using System.Numerics;
+using DG.Tweening;
 using UnityEngine;
+using Random = UnityEngine.Random;
+using Vector3 = UnityEngine.Vector3;
 
 namespace BubbleIdle
 {
@@ -50,6 +50,32 @@ namespace BubbleIdle
             {
                 return $"{shortenedNumber}{suffixes[suffixIndex]}";
             }
+        }
+        
+        public static void StartBubbleMovement(this Transform transform, Vector3 initialPosition, float moveDuration = 10, float swingAmplitude = 1, float swingSpeed = 30)
+        {
+            // Randomizing swing speed and amplitude for variation
+            swingSpeed += Random.Range(-0.8f, 0.8f);
+            swingAmplitude += Random.Range(-0.8f, 0.8f);
+            moveDuration += Random.Range(-5f, 2f);
+            
+            transform.localScale = Vector3.one * 0.75f + Vector3.one * Random.Range(0f, 0.5f);
+            
+            // Mouvement vertical principal
+            transform.DOMoveY(initialPosition.y + 20f, moveDuration)
+                .SetEase(Ease.OutQuad);
+            
+            // Mouvement de swing horizontal
+            int negativeSwing = Random.Range(0, 2) == 1 ? -1 : 1;
+            DOTween.To(() => 0f, x => {
+                    float swingOffset = Mathf.Sin(x * swingSpeed) * swingAmplitude;
+                    transform.position = new Vector3(
+                        initialPosition.x + swingOffset * negativeSwing,
+                        transform.position.y,
+                        transform.position.z
+                    );
+                }, 1f, moveDuration)
+                .SetEase(Ease.Linear);
         }
     }
 }

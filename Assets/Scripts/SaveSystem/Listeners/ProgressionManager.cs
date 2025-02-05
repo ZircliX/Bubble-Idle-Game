@@ -36,6 +36,7 @@ namespace BubbleIdle.SaveSystem
 
             saveFile.seaweeds = seaweeds;
             saveFile.bubbles = GameController.ResourcesManager.BubbleCount.ToString();
+            saveFile.specialBubbles = GameController.ResourcesManager.SpecialBubbleCount.ToString();
             saveFile.totalFishes = totalFishes;
         }
 
@@ -58,6 +59,8 @@ namespace BubbleIdle.SaveSystem
             SecondsPassed = timePassed.TotalSeconds;
             
             GameController.ResourcesManager.AddBubbles(saveFile.bubbles);
+            GameController.ResourcesManager.AddSpecialBubbles(int.Parse(saveFile.specialBubbles));
+            
             seaweeds = saveFile.seaweeds;
             totalFishes = saveFile.totalFishes;
 

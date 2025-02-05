@@ -1,9 +1,11 @@
 using BubbleIdle.BubbleSystem;
+using BubbleIdle.Core.UI;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 namespace BubbleIdle.SeaweedSystem
 {
-    public class Seaweed : MonoBehaviour
+    public class Seaweed : MonoBehaviour, IPointerClickHandler
     {
         public SeaweedData data { get; protected set; }
         public int currentLevel { get; protected set; }
@@ -37,7 +39,7 @@ namespace BubbleIdle.SeaweedSystem
             }
         }
 
-        private void ProduceBubble()
+        protected virtual void ProduceBubble()
         {
             Bubble newBubble = Instantiate(data.bubblePrefab);
             newBubble.transform.position = transform.position;
@@ -61,6 +63,11 @@ namespace BubbleIdle.SeaweedSystem
         {
             float nextLevelProduction = data.baseProduction * Mathf.Pow(data.productionMultiplier, currentLevel + nextLevel);
             return Mathf.RoundToInt(nextLevelProduction * GameController.ResourcesManager.ProductionBonus);
+        }
+
+        public void OnPointerClick(PointerEventData eventData)
+        {
+            MenuManager.Instance.OpenSeaweedPanel(data);
         }
     }
 }
