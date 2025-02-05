@@ -1,4 +1,5 @@
 using BubbleIdle.SeaweedSystem;
+using DG.Tweening;
 using LTX.Singletons;
 using TMPro;
 using UnityEngine;
@@ -9,6 +10,7 @@ namespace BubbleIdle.Core.UI
     {
         [SerializeField] private SeaweedInfo[] seaweedsInfos;
         private MenuState menuState;
+        private Tween shakeTween;
         
         public void OpenSeaweedPanel(SeaweedData data)
         {
@@ -23,6 +25,16 @@ namespace BubbleIdle.Core.UI
 
                 seaweedsInfos[i].parent.SetActive(false);
             }
+
+            if (shakeTween != null && shakeTween.IsActive())
+            {
+                shakeTween.Kill();
+                info.parent.transform.localScale = Vector3.one;
+            }
+
+            // Apply a new shake effect
+            shakeTween = info.parent.transform.DOShakeScale(0.2f, 0.5f)
+                .OnComplete(() => shakeTween = null); // Clear the tween reference when done
             
             UpdateUI();
         }
@@ -37,7 +49,7 @@ namespace BubbleIdle.Core.UI
                 
                 int prod = SeaweedManager.Instance.seaweeds[seaweed.data.seaweedType].GetProductionAtLevel();
                 info.name.text = seaweed.data.seaweedName;
-                info.level.text = seaweed.currentLevel.ToString();
+                info.level.text = $"lvl. {seaweed.currentLevel.ToString()}";
                 info.prodPerSecond.text = $"+{StaticTools.FormatNumber(prod / seaweed.data.productionCooldown)} /s";
             }
         }
