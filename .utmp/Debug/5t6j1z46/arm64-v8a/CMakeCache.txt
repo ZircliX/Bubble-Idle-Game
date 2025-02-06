@@ -112,7 +112,11 @@ CMAKE_FIND_ROOT_PATH:UNINITIALIZED=C:\Users\lolof\Documents\GitHub\Bubble-Idle G
 CMAKE_INSTALL_PREFIX:PATH=C:/Program Files (x86)/Unity
 
 //No help, variable specified on the command line.
+<<<<<<< HEAD
 CMAKE_LIBRARY_OUTPUT_DIRECTORY:UNINITIALIZED=C:\Users\lolof\Documents\GitHub\Bubble-Idle Game\Library\PramData\AndroidApplicationController\Cache\com.ZircliX.AquaticBloom\gradle-project\unityLibrary\build\intermediates\cxx\Debug\5t6j1z46\obj\arm64-v8a
+=======
+CMAKE_LIBRARY_OUTPUT_DIRECTORY:UNINITIALIZED=C:\Users\lolof\Documents\GitHub\Bubble-Idle Game\Library\Bee\Android\Prj\IL2CPP\Gradle\unityLibrary\build\intermediates\cxx\Debug\5t6j1z46\obj\arm64-v8a
+>>>>>>> 7574d4b (jsp c koi)
 
 //Path to a program.
 CMAKE_LINKER:FILEPATH=C:/Program Files/Unity/Hub/Editor/6000.0.28f1/Editor/Data/PlaybackEngines/AndroidPlayer/NDK/toolchains/llvm/prebuilt/windows-x86_64/bin/ld.lld.exe
@@ -165,7 +169,11 @@ CMAKE_RANLIB:FILEPATH=C:/Program Files/Unity/Hub/Editor/6000.0.28f1/Editor/Data/
 CMAKE_READELF:FILEPATH=C:/Program Files/Unity/Hub/Editor/6000.0.28f1/Editor/Data/PlaybackEngines/AndroidPlayer/NDK/toolchains/llvm/prebuilt/windows-x86_64/bin/llvm-readelf.exe
 
 //No help, variable specified on the command line.
+<<<<<<< HEAD
 CMAKE_RUNTIME_OUTPUT_DIRECTORY:UNINITIALIZED=C:\Users\lolof\Documents\GitHub\Bubble-Idle Game\Library\PramData\AndroidApplicationController\Cache\com.ZircliX.AquaticBloom\gradle-project\unityLibrary\build\intermediates\cxx\Debug\5t6j1z46\obj\arm64-v8a
+=======
+CMAKE_RUNTIME_OUTPUT_DIRECTORY:UNINITIALIZED=C:\Users\lolof\Documents\GitHub\Bubble-Idle Game\Library\Bee\Android\Prj\IL2CPP\Gradle\unityLibrary\build\intermediates\cxx\Debug\5t6j1z46\obj\arm64-v8a
+>>>>>>> 7574d4b (jsp c koi)
 
 //Flags used by the linker during the creation of shared libraries
 // during all build types.
@@ -239,7 +247,11 @@ Unity_BINARY_DIR:STATIC=C:/Users/lolof/Documents/GitHub/Bubble-Idle Game/.utmp/D
 Unity_IS_TOP_LEVEL:STATIC=ON
 
 //Value Computed by CMake
+<<<<<<< HEAD
 Unity_SOURCE_DIR:STATIC=C:/Users/lolof/Documents/GitHub/Bubble-Idle Game/Library/PramData/AndroidApplicationController/Cache/com.ZircliX.AquaticBloom/gradle-project/unityLibrary/src/main/cpp
+=======
+Unity_SOURCE_DIR:STATIC=C:/Users/lolof/Documents/GitHub/Bubble-Idle Game/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/src/main/cpp
+>>>>>>> 7574d4b (jsp c koi)
 
 //The directory containing a CMake configuration file for game-activity.
 game-activity_DIR:PATH=C:/Users/lolof/Documents/GitHub/Bubble-Idle Game/.utmp/Debug/5t6j1z46/prefab/arm64-v8a/prefab/lib/aarch64-linux-android/cmake/game-activity
@@ -254,7 +266,11 @@ game_IS_TOP_LEVEL:STATIC=OFF
 game_LIB_DEPENDS:STATIC=general;android;general;game-activity::game-activity_static;general;log;
 
 //Value Computed by CMake
+<<<<<<< HEAD
 game_SOURCE_DIR:STATIC=C:/Users/lolof/Documents/GitHub/Bubble-Idle Game/Library/PramData/AndroidApplicationController/Cache/com.ZircliX.AquaticBloom/gradle-project/unityLibrary/src/main/cpp/GameActivity
+=======
+game_SOURCE_DIR:STATIC=C:/Users/lolof/Documents/GitHub/Bubble-Idle Game/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/src/main/cpp/GameActivity
+>>>>>>> 7574d4b (jsp c koi)
 
 //The directory containing a CMake configuration file for games-frame-pacing.
 games-frame-pacing_DIR:PATH=C:/Users/lolof/Documents/GitHub/Bubble-Idle Game/.utmp/Debug/5t6j1z46/prefab/arm64-v8a/prefab/lib/aarch64-linux-android/cmake/games-frame-pacing
@@ -269,7 +285,11 @@ swappywrapper_IS_TOP_LEVEL:STATIC=OFF
 swappywrapper_LIB_DEPENDS:STATIC=general;android;general;games-frame-pacing::swappy_static;general;log;
 
 //Value Computed by CMake
+<<<<<<< HEAD
 swappywrapper_SOURCE_DIR:STATIC=C:/Users/lolof/Documents/GitHub/Bubble-Idle Game/Library/PramData/AndroidApplicationController/Cache/com.ZircliX.AquaticBloom/gradle-project/unityLibrary/src/main/cpp/FramePacing
+=======
+swappywrapper_SOURCE_DIR:STATIC=C:/Users/lolof/Documents/GitHub/Bubble-Idle Game/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/src/main/cpp/FramePacing
+>>>>>>> 7574d4b (jsp c koi)
 
 
 ########################
@@ -348,7 +368,11 @@ CMAKE_GENERATOR_PLATFORM:INTERNAL=
 CMAKE_GENERATOR_TOOLSET:INTERNAL=
 //Source directory with the top level CMakeLists.txt file for this
 // project
+<<<<<<< HEAD
 CMAKE_HOME_DIRECTORY:INTERNAL=C:/Users/lolof/Documents/GitHub/Bubble-Idle Game/Library/PramData/AndroidApplicationController/Cache/com.ZircliX.AquaticBloom/gradle-project/unityLibrary/src/main/cpp
+=======
+CMAKE_HOME_DIRECTORY:INTERNAL=C:/Users/lolof/Documents/GitHub/Bubble-Idle Game/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/src/main/cpp
+>>>>>>> 7574d4b (jsp c koi)
 //Install .so files without execute permission.
 CMAKE_INSTALL_SO_NO_EXE:INTERNAL=0
 //ADVANCED property for variable: CMAKE_LINKER
