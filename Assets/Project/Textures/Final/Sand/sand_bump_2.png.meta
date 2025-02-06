@@ -1,19 +1,10 @@
 fileFormatVersion: 2
-guid: 915c2a65e866ef748b67f9cb5627a55b
+guid: 63f43ee225ce956479ed69401d4d0dfd
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -1999211560269146926
-    second: bulle2_0
-  - first:
-      213: 2601605675705071299
-    second: bulle2_1
-  - first:
-      213: 9163005735003523964
-    second: bulle2_2
-  - first:
-      213: -6481857746407415236
-    second: bulle2_3
+      213: 8077655226559498363
+    second: sand_bump_2_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -122,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: bulle2_0
+      name: sand_bump_2_0
       rect:
         serializedVersion: 2
-        x: 136
-        y: 217
-        width: 465
-        height: 407
+        x: 13
+        y: 26
+        width: 190
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -137,74 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 2d49d4f9daf5144e0800000000000000
-      internalID: -1999211560269146926
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: bulle2_1
-      rect:
-        serializedVersion: 2
-        x: 206
-        y: 200
-        width: 85
-        height: 116
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 3c67a020492ca1420800000000000000
-      internalID: 2601605675705071299
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: bulle2_2
-      rect:
-        serializedVersion: 2
-        x: 510
-        y: 212
-        width: 24
-        height: 19
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: c7b80c51b29892f70800000000000000
-      internalID: 9163005735003523964
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: bulle2_3
-      rect:
-        serializedVersion: 2
-        x: 331
-        y: 165
-        width: 118
-        height: 22
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: c32a5c4d8b0db06a0800000000000000
-      internalID: -6481857746407415236
+      spriteID: b78082d91a8991070800000000000000
+      internalID: 8077655226559498363
       vertices: []
       indices: 
       edges: []
@@ -223,10 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      bulle2_0: -1999211560269146926
-      bulle2_1: 2601605675705071299
-      bulle2_2: 9163005735003523964
-      bulle2_3: -6481857746407415236
+      sand_bump_2_0: 8077655226559498363
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
