@@ -20,9 +20,9 @@ namespace BubbleIdle.SaveSystem
         public void Write(ref SaveFile saveFile)
         {
             string timeString = Now(); // ISO 8601 format
-            Debug.Log("TIME");
-            Debug.Log(DateTime.UtcNow);
-            Debug.Log(timeString);
+            //Debug.Log("TIME");
+            //Debug.Log(DateTime.UtcNow);
+            //Debug.Log(timeString);
             saveFile.quitTime = timeString;
 
             for (int index = 0; index < seaweeds.Count; index++)

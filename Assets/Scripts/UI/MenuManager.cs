@@ -3,6 +3,7 @@ using DG.Tweening;
 using LTX.Singletons;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 namespace BubbleIdle.Core.UI
@@ -16,41 +17,19 @@ namespace BubbleIdle.Core.UI
         {
             EventManager.Instance.OnSeaweedBuySound += UpdateUI;
             EventManager.Instance.OnSeaweedUpgrade += UpdateUI;
+            SceneManager.sceneLoaded += UpdateUIOnScene;
         }
-        
+
+        private void UpdateUIOnScene(Scene arg0, LoadSceneMode arg1)
+        {
+            UpdateUI();
+        }
+
         private void OnDisable()
         {
             EventManager.Instance.OnSeaweedBuySound -= UpdateUI;
             EventManager.Instance.OnSeaweedUpgrade -= UpdateUI;
-        }
-        
-        public void OpenSeaweedPanel(SeaweedData data)
-        {
-            SeaweedInfo info = seaweedsInfos[data.seaweedType];
-            for (int i = 0; i < seaweedsInfos.Length; i++)
-            {
-                if (seaweedsInfos[i].parent == null) continue;
-                
-                if (i == data.seaweedType)
-                {
-                    info.parent.SetActive(!info.parent.activeSelf);
-                    continue;
-                }
-                
-                seaweedsInfos[i].parent.SetActive(false);
-            }
-
-            if (shakeTween != null && shakeTween.IsActive())
-            {
-                shakeTween.Kill();
-                info.parent.transform.localScale = Vector3.one;
-            }
-
-            // Apply a new shake effect
-            shakeTween = info.parent.transform.DOShakeScale(0.1f, 0.2f)
-                .OnComplete(() => shakeTween = null); // Clear the tween reference when done
-            
-            UpdateUI();
+            SceneManager.sceneLoaded -= UpdateUIOnScene;
         }
 
         public void UpdateUI()
@@ -60,6 +39,7 @@ namespace BubbleIdle.Core.UI
                 if (!SeaweedManager.Instance.seaweeds.TryGetValue(i, out Seaweed seaweed)) continue;
                 
                 SeaweedInfo info = seaweedsInfos[i];
+                info.parent.SetActive(true);
                 
                 int prod = SeaweedManager.Instance.seaweeds[seaweed.data.seaweedType].GetProductionAtLevel();
                 info.progressBar.fillAmount = seaweed.currentLevel / 20f;

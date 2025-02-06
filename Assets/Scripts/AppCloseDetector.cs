@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 namespace BubbleIdle
@@ -16,12 +17,21 @@ namespace BubbleIdle
 
     public class AppLifecycleForwarder : MonoBehaviour
     {
+        private IEnumerator Start()
+        {
+            while (true)
+            {
+                GameController.SaveProgress();
+                yield return new WaitForSeconds(60);
+            }
+        }
+        
         private void OnApplicationPause(bool isPaused)
         {
             if (isPaused)
             {
                 Debug.Log("App paused (sent to background)");
-                GameController.UnLoad();
+                GameController.SaveProgress();
             }
         }
 

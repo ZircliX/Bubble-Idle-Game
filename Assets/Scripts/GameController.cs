@@ -50,7 +50,7 @@ namespace BubbleIdle
             Save.RemoveListener(ProgressionManager);
         }
 
-        private static void SaveProgress()
+        public static void SaveProgress()
         {
             Debug.Log("Saving player progress");
 

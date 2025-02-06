@@ -10,7 +10,6 @@ namespace BubbleIdle.SeaweedSystem
             this.data = data;
             this.currentLevel = level;
             
-            sr = transform.GetChild(0).GetComponent<SpriteRenderer>();
             int spriteIndex = Mathf.Clamp(level / 10, 0, 2);
             sr.sprite = data.levelsIcon[spriteIndex];
 
