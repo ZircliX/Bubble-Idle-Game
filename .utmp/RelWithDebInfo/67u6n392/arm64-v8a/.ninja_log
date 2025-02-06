@@ -1,12 +1,12 @@
 # ninja log v5
-79	496	7602836429749253	FramePacing/CMakeFiles/swappywrapper.dir/UnitySwappyWrapper.cpp.o	f30ea9d48749f46c
-498	860	7602836433026350	C:/Users/lolof/Documents/GitHub/Bubble-Idle Game/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/build/intermediates/cxx/RelWithDebInfo/67u6n392/obj/arm64-v8a/libswappywrapper.so	53508b570dedf06d
-23	1567	7602836440297169	GameActivity/CMakeFiles/game.dir/UGAInputKeyEvent.cpp.o	d74d8be7e494cccb
-15	1610	7602836440658747	GameActivity/CMakeFiles/game.dir/UGAConfiguration.cpp.o	329fc21f297c21f9
-68	1612	7602836440694027	GameActivity/CMakeFiles/game.dir/UGAInputMotionEvent.cpp.o	7f5e6dbe906bf237
-53	1756	7602836442220666	GameActivity/CMakeFiles/game.dir/UGASoftKeyboard.cpp.o	cc7ebf77c8244010
-31	1757	7602836442220666	GameActivity/CMakeFiles/game.dir/UGAEntry.cpp.o	17614545b020f46a
-7	1847	7602836443167140	GameActivity/CMakeFiles/game.dir/UGADebug.cpp.o	f1abc8819ac0cc9a
-41	2000	7602836444757161	GameActivity/CMakeFiles/game.dir/UGAInput.cpp.o	1f1d852ab2cf3597
-1	2104	7602836445797907	GameActivity/CMakeFiles/game.dir/UGAApplication.cpp.o	72a6e9f362807d9e
-2105	2261	7602836447397288	C:/Users/lolof/Documents/GitHub/Bubble-Idle Game/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/build/intermediates/cxx/RelWithDebInfo/67u6n392/obj/arm64-v8a/libgame.so	8fee3e7821881d47
+48	361	7605071883298254	FramePacing/CMakeFiles/swappywrapper.dir/UnitySwappyWrapper.cpp.o	f30ea9d48749f46c
+363	600	7605071885618192	C:/Users/lolof/Documents/GitHub/Bubble-Idle Game/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/build/intermediates/cxx/RelWithDebInfo/67u6n392/obj/arm64-v8a/libswappywrapper.so	53508b570dedf06d
+1	1025	7605071889897783	GameActivity/CMakeFiles/game.dir/UGAConfiguration.cpp.o	329fc21f297c21f9
+21	1040	7605071890012951	GameActivity/CMakeFiles/game.dir/UGAInputKeyEvent.cpp.o	d74d8be7e494cccb
+33	1061	7605071890198112	GameActivity/CMakeFiles/game.dir/UGAInputMotionEvent.cpp.o	7f5e6dbe906bf237
+41	1120	7605071890818090	GameActivity/CMakeFiles/game.dir/UGASoftKeyboard.cpp.o	cc7ebf77c8244010
+14	1121	7605071890848101	GameActivity/CMakeFiles/game.dir/UGAEntry.cpp.o	17614545b020f46a
+6	1174	7605071891428081	GameActivity/CMakeFiles/game.dir/UGADebug.cpp.o	f1abc8819ac0cc9a
+28	1298	7605071892668085	GameActivity/CMakeFiles/game.dir/UGAInput.cpp.o	1f1d852ab2cf3597
+10	1374	7605071893398074	GameActivity/CMakeFiles/game.dir/UGAApplication.cpp.o	72a6e9f362807d9e
+1374	1525	7605071894923151	C:/Users/lolof/Documents/GitHub/Bubble-Idle Game/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/build/intermediates/cxx/RelWithDebInfo/67u6n392/obj/arm64-v8a/libgame.so	8fee3e7821881d47

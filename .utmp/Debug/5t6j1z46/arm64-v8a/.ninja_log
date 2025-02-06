@@ -1,0 +1,12 @@
+# ninja log v5
+134	933	7605076328792464	FramePacing/CMakeFiles/swappywrapper.dir/UnitySwappyWrapper.cpp.o	daeece01fa661727
+936	2350	7605076341236441	C:/Users/lolof/Documents/GitHub/Bubble-Idle Game/Library/PramData/AndroidApplicationController/Cache/com.ZircliX.AquaticBloom/gradle-project/unityLibrary/build/intermediates/cxx/Debug/5t6j1z46/obj/arm64-v8a/libswappywrapper.so	2d72b159705fef02
+14	2980	7605076349586730	GameActivity/CMakeFiles/game.dir/UGAConfiguration.cpp.o	8f52225d21fc3c58
+63	3040	7605076350142987	GameActivity/CMakeFiles/game.dir/UGAInputKeyEvent.cpp.o	347b677a095066d8
+42	3042	7605076349827292	GameActivity/CMakeFiles/game.dir/UGAEntry.cpp.o	7f14d7b78087ba15
+116	3066	7605076350519160	GameActivity/CMakeFiles/game.dir/UGAInputMotionEvent.cpp.o	260b83068a8c7918
+125	3073	7605076350970699	GameActivity/CMakeFiles/game.dir/UGASoftKeyboard.cpp.o	2a9ab24fea713c2d
+2	3110	7605076351520714	GameActivity/CMakeFiles/game.dir/UGADebug.cpp.o	7d1f8635b542aa55
+100	3285	7605076353244985	GameActivity/CMakeFiles/game.dir/UGAInput.cpp.o	1a8ceefe0ecc5f6d
+24	3448	7605076354745915	GameActivity/CMakeFiles/game.dir/UGAApplication.cpp.o	88d241c7f4d2efea
+3448	3892	7605076358424958	C:/Users/lolof/Documents/GitHub/Bubble-Idle Game/Library/PramData/AndroidApplicationController/Cache/com.ZircliX.AquaticBloom/gradle-project/unityLibrary/build/intermediates/cxx/Debug/5t6j1z46/obj/arm64-v8a/libgame.so	988aee13f9116b05

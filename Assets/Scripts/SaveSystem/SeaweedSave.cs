@@ -1,6 +1,3 @@
-using BubbleIdle.SeaweedSystem;
-using UnityEngine;
-
 namespace BubbleIdle.SaveSystem
 {
     [System.Serializable]
@@ -8,6 +5,5 @@ namespace BubbleIdle.SaveSystem
     {
         public int typeIndex;
         public int seaweedLevel;
-        public Vector3 seaweedPosition;
     }
 }

@@ -37,7 +37,7 @@ namespace BubbleIdle.BubbleSystem
             FeedbackCounter.Instance.SpawnCounter(transform.position, value);
             
             EventManager.Instance.ClickBubble();
-            GameController.ResourcesManager.AddBubbles(value.ToString());
+            GameController.ResourcesManager.AddBubbles((value * GameController.ResourcesManager.ProductionBonus).ToString());
             Destroy(gameObject);
         }
     }

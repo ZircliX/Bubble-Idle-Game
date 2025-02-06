@@ -508,7 +508,6 @@ GameObject:
   - component: {fileID: 4850746132162810861}
   - component: {fileID: 4096108082068094281}
   - component: {fileID: 8079839837695482644}
-  - component: {fileID: 9103843125324844494}
   m_Layer: 5
   m_Name: Info
   m_TagString: Untagged
@@ -524,7 +523,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6852242943538932210}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: -0.005943805}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -538,7 +537,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -126, y: -221.4}
+  m_AnchoredPosition: {x: -217, y: -254}
   m_SizeDelta: {x: 806.49, y: 400}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &4096108082068094281
@@ -579,18 +578,6 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!210 &9103843125324844494
-SortingGroup:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6852242943538932210}
-  m_Enabled: 1
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_SortAtRoot: 0
 --- !u!1 &7211561357512319102
 GameObject:
   m_ObjectHideFlags: 0
@@ -718,19 +705,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   seaweedsInfos:
   - parent: {fileID: 6852242943538932210}
-    name: {fileID: 0}
+    progressBar: {fileID: 4344892796260896887}
     level: {fileID: 1342087970249734598}
     prodPerSecond: {fileID: 8027247270165654886}
   - parent: {fileID: 0}
-    name: {fileID: 0}
+    progressBar: {fileID: 0}
     level: {fileID: 0}
     prodPerSecond: {fileID: 0}
   - parent: {fileID: 0}
-    name: {fileID: 0}
+    progressBar: {fileID: 0}
     level: {fileID: 0}
     prodPerSecond: {fileID: 0}
   - parent: {fileID: 0}
-    name: {fileID: 0}
+    progressBar: {fileID: 0}
     level: {fileID: 0}
     prodPerSecond: {fileID: 0}
 --- !u!114 &929762380815719576

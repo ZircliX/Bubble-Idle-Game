@@ -13,7 +13,6 @@ namespace BubbleIdle.FishSystem
         protected override void Awake()
         {
             base.Awake();
-            Debug.Log($"Time since last login : {GameController.ProgressionManager.SecondsPassed} seconds");
             
             for (int i = 0; i < GameController.ProgressionManager.totalFishes; i++)
             {

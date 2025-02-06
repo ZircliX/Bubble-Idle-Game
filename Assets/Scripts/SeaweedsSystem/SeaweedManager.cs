@@ -59,14 +59,13 @@ namespace BubbleIdle.SeaweedSystem
                 Seaweed newSeaweed;
                 if (seaweedSave.typeIndex == 3)
                 {
-                    newSeaweed = Instantiate(specialSeaweedPrefab, seaweedSave.seaweedPosition, Quaternion.identity);
+                    newSeaweed = Instantiate(specialSeaweedPrefab, seaweedsPos[seaweedSave.typeIndex]);
                 }
                 else
                 {
-                    newSeaweed = Instantiate(seaweedPrefab, seaweedSave.seaweedPosition, Quaternion.identity);
+                    newSeaweed = Instantiate(seaweedPrefab, seaweedsPos[seaweedSave.typeIndex]);
                 }
                 
-                newSeaweed.transform.SetParent(seaweedsPos[seaweedSave.typeIndex]);
                 newSeaweed.transform.localScale = Vector3.one;
                 seaweeds.Add(seaweedSave.typeIndex, newSeaweed);
                 newSeaweed.Initialize(seaweedDatas[seaweedSave.typeIndex], seaweedSave.seaweedLevel);

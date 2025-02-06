@@ -552,6 +552,41 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!1 &4890294775952098302
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4657621186985684689}
+  m_Layer: 5
+  m_Name: CounterParent
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &4657621186985684689
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4890294775952098302}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 5098705654289015671}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &5094018918182324470
 GameObject:
   m_ObjectHideFlags: 0
@@ -563,7 +598,6 @@ GameObject:
   - component: {fileID: 5230944089650764589}
   - component: {fileID: 419456846268476083}
   - component: {fileID: 630378746435183976}
-  - component: {fileID: 6039850767730692414}
   m_Layer: 5
   m_Name: Bubbles
   m_TagString: Untagged
@@ -630,20 +664,6 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 0.3
---- !u!114 &6039850767730692414
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5094018918182324470}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c32c0ef6325843dfb42997752d739107, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  bubbles: {fileID: 8963972032852506223}
-  speicalBubbles: {fileID: 2858288931849083773}
 --- !u!1 &5112452740841626856
 GameObject:
   m_ObjectHideFlags: 0
@@ -1149,6 +1169,7 @@ GameObject:
   - component: {fileID: 1560418585247654278}
   - component: {fileID: 4999446486786588247}
   - component: {fileID: 5326078637721268451}
+  - component: {fileID: 2870514905042986490}
   m_Layer: 5
   m_Name: Gameplay
   m_TagString: Untagged
@@ -1170,6 +1191,7 @@ RectTransform:
   m_Children:
   - {fileID: 5230944089650764589}
   - {fileID: 583617440348946187}
+  - {fileID: 4657621186985684689}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -1230,6 +1252,20 @@ MonoBehaviour:
   ConformX: 1
   ConformY: 1
   Logging: 0
+--- !u!114 &2870514905042986490
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6890541083322831212}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c32c0ef6325843dfb42997752d739107, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bubbles: {fileID: 8963972032852506223}
+  specialBubbles: {fileID: 2858288931849083773}
 --- !u!1 &7266179341321898742
 GameObject:
   m_ObjectHideFlags: 0
