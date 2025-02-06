@@ -123,19 +123,63 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 0
-        width: 900
-        height: 1080
+        y: 496
+        width: 86
+        height: 313
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: fac44b50097c3114e8d685fecf9f8cfa
-      internalID: 1912862457
+      spriteID: 030231f36479ced70800000000000000
+      internalID: 9073793677206429744
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ui_fenetre_week2_overlay_1
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 122
+        width: 141
+        height: 251
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8ee29d964cbb0c470800000000000000
+      internalID: 8412930556191911656
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ui_fenetre_week2_overlay_2
+      rect:
+        serializedVersion: 2
+        x: 102
+        y: 108
+        width: 27
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 27b4267b6e1d48590800000000000000
+      internalID: -7672777076283126926
       vertices: []
       indices: 
       edges: []
@@ -144,7 +188,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: d56d46eee69205a4f8d057f5a3e702c4
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -153,8 +197,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      ui_fenetre_week2_overlay_0: 1912862457
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

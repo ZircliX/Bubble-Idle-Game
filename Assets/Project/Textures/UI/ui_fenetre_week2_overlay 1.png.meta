@@ -1,10 +1,19 @@
 fileFormatVersion: 2
-guid: 06661e3a7db06aa4796b0c49150915f1
+guid: 8e42599ba0309744b88f076b4dd9782b
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -8399605265453230703
-    second: ui_fenetre_week2_0
+      213: -1921493334218782295
+    second: ui_fenetre_week2_overlay 1_0
+  - first:
+      213: -3927899363990292498
+    second: ui_fenetre_week2_overlay 1_1
+  - first:
+      213: -2033744938979442499
+    second: ui_fenetre_week2_overlay 1_2
+  - first:
+      213: -5164216714836602834
+    second: ui_fenetre_week2_overlay 1_3
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,23 +122,23 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: ui_fenetre_week2_0
+      name: ui_fenetre_week2_overlay 1_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 12
-        width: 891
-        height: 1056
+        y: 0
+        width: 900
+        height: 1080
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 195d82b938b9e6b80800000000000000
-      internalID: -8399605265453230703
+      spriteID: 16d34e437a2a4b145a64723306b39b79
+      internalID: -173702821
       vertices: []
       indices: 
       edges: []
@@ -138,7 +147,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 39df05aa1fb3a1e4bab001d66044ce17
     internalID: 0
     vertices: []
     indices: 
@@ -147,7 +156,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      ui_fenetre_week2_overlay 1_0: -173702821
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

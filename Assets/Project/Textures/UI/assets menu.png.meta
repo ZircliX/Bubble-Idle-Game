@@ -1,10 +1,22 @@
 fileFormatVersion: 2
-guid: 06661e3a7db06aa4796b0c49150915f1
+guid: 3a0029972d9ecb9448c16b1bad71c6c2
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -8399605265453230703
-    second: ui_fenetre_week2_0
+      213: -4557480818602990347
+    second: assets menu_0
+  - first:
+      213: -7711157355010769561
+    second: assets menu_1
+  - first:
+      213: -3546342377713038633
+    second: assets menu_2
+  - first:
+      213: 7310070593279386421
+    second: assets menu_3
+  - first:
+      213: 8017945530382158353
+    second: assets menu_4
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,23 +125,111 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: ui_fenetre_week2_0
+      name: assets menu_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 12
-        width: 891
-        height: 1056
+        x: 16
+        y: 803
+        width: 292
+        height: 258
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 195d82b938b9e6b80800000000000000
-      internalID: -8399605265453230703
+      spriteID: 5f42380975390c0c0800000000000000
+      internalID: -4557480818602990347
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: assets menu_2
+      rect:
+        serializedVersion: 2
+        x: 334
+        y: 289
+        width: 30
+        height: 770
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7da0084956cd8cec0800000000000000
+      internalID: -3546342377713038633
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: assets menu_3
+      rect:
+        serializedVersion: 2
+        x: 377
+        y: 576
+        width: 31
+        height: 482
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 53362736976927560800000000000000
+      internalID: 7310070593279386421
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: assets menu_4
+      rect:
+        serializedVersion: 2
+        x: 41
+        y: 542
+        width: 270
+        height: 241
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 11a0cde9af6754f60800000000000000
+      internalID: 8017945530382158353
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: assets menu_1
+      rect:
+        serializedVersion: 2
+        x: 30
+        y: 257
+        width: 292
+        height: 258
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d6577f5842e1ea1449b6d2ff099e1576
+      internalID: -218000471
       vertices: []
       indices: 
       edges: []
@@ -138,7 +238,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: f57911033f2fa2848a87db3eb27565a8
     internalID: 0
     vertices: []
     indices: 
@@ -147,7 +247,12 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      assets menu_0: -4557480818602990347
+      assets menu_1: -218000471
+      assets menu_2: -3546342377713038633
+      assets menu_3: 7310070593279386421
+      assets menu_4: 8017945530382158353
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

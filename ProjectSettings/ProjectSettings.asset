@@ -165,7 +165,7 @@ PlayerSettings:
   androidMinAspectRatio: 1
   applicationIdentifier:
     Android: com.ZircliX.AquaticBloom
-    Standalone: com.DefaultCompany.2D-URP
+    Standalone: com.ZircliX.AquaticBloom
   buildNumber:
     Standalone: 0
     VisionOS: 0

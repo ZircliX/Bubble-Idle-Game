@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 06661e3a7db06aa4796b0c49150915f1
+guid: 4141be642478a704fa84837e2f0a2a96
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -8399605265453230703
-    second: ui_fenetre_week2_0
+      213: -279204478416792964
+    second: squirclesketch2_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: ui_fenetre_week2_0
+      name: squirclesketch2_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 12
-        width: 891
-        height: 1056
+        x: 20
+        y: 0
+        width: 1463
+        height: 498
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 195d82b938b9e6b80800000000000000
-      internalID: -8399605265453230703
+      spriteID: c72d4449101102cf0800000000000000
+      internalID: -279204478416792964
       vertices: []
       indices: 
       edges: []
@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      squirclesketch2_0: -279204478416792964
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
