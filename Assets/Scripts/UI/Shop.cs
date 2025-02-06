@@ -1,4 +1,3 @@
-using System.Numerics;
 using BubbleIdle.FishSystem;
 using BubbleIdle.SeaweedSystem;
 using UnityEngine;

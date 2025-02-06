@@ -59,7 +59,7 @@ namespace BubbleIdle
             swingAmplitude += Random.Range(-0.8f, 0.8f);
             moveDuration += Random.Range(-5f, 2f);
             
-            transform.localScale = Vector3.one * 0.75f + Vector3.one * Random.Range(0f, 0.5f);
+            transform.localScale = Vector3.one * 0.75f + Vector3.one * Random.Range(0.3f, 0.8f);
             
             // Mouvement vertical principal
             transform.DOMoveY(initialPosition.y + 20f, moveDuration)

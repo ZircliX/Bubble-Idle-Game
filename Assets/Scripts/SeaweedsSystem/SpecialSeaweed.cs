@@ -5,14 +5,11 @@ namespace BubbleIdle.SeaweedSystem
 {
     public class SpecialSeaweed : Seaweed
     {
-        private float bubbleTimer;
-        
         public override void Initialize(SeaweedData data, int level = 0)
         {
             this.data = data;
             this.currentLevel = level;
             
-            sr = transform.GetChild(0).GetComponent<SpriteRenderer>();
             int spriteIndex = Mathf.Clamp(level / 10, 0, 2);
             sr.sprite = data.levelsIcon[spriteIndex];
 

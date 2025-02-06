@@ -1,23 +1,20 @@
 using BubbleIdle.BubbleSystem;
-using BubbleIdle.Core.UI;
 using UnityEngine;
-using UnityEngine.EventSystems;
 
 namespace BubbleIdle.SeaweedSystem
 {
-    public class Seaweed : MonoBehaviour, IPointerClickHandler
+    public class Seaweed : MonoBehaviour
     {
+        [SerializeField] protected SpriteRenderer sr;
         public SeaweedData data { get; protected set; }
         public int currentLevel { get; protected set; }
-        private float productionTimer, bubbleTimer;
-        protected SpriteRenderer sr;
+        protected float productionTimer, bubbleTimer;
 
         public virtual void Initialize(SeaweedData data, int level = 0)
         {
             this.data = data;
             this.currentLevel = level;
 
-            sr = transform.GetChild(0).GetComponent<SpriteRenderer>();
             int spriteIndex = Mathf.Clamp(level / 10, 0, 2);
             sr.sprite = data.levelsIcon[spriteIndex];
         }
@@ -63,11 +60,6 @@ namespace BubbleIdle.SeaweedSystem
         {
             float nextLevelProduction = data.baseProduction * Mathf.Pow(data.productionMultiplier, currentLevel + nextLevel);
             return Mathf.RoundToInt(nextLevelProduction * GameController.ResourcesManager.ProductionBonus);
-        }
-
-        public void OnPointerClick(PointerEventData eventData)
-        {
-            MenuManager.Instance.OpenSeaweedPanel(data);
         }
     }
 }

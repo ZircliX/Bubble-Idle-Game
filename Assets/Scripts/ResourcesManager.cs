@@ -56,5 +56,14 @@ namespace BubbleIdle
                 Debug.LogWarning("Not enough bubbles noob!");
             }
         }
+
+        public void SpendSpecialBubbles(int amount)
+        {
+            if (SpecialBubbleCount >= amount)
+            {
+                SpecialBubbleCount -= amount;
+                EventManager.Instance.ChangeMoney();
+            }
+        }
     }
 }

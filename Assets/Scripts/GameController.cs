@@ -29,12 +29,12 @@ namespace BubbleIdle
         private static void LoadSetup()
         {
             Application.targetFrameRate = 60;
-            Application.quitting += UnLoad;
             
             ResourcesManager = new ResourcesManager();
             ProgressionManager = new ProgressionManager();
         }
-        
+
+
         [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.AfterSceneLoad)]
         private static void LoadAfterSetup()
         {
@@ -42,15 +42,15 @@ namespace BubbleIdle
             Save.SetSaveManager(new SaveManager());
             LoadProgress();
         }
-
-        private static void UnLoad()
+        
+        public static void UnLoad()
         {
             Debug.Log("Quit Game");
             SaveProgress();
             Save.RemoveListener(ProgressionManager);
         }
 
-        private static void SaveProgress()
+        public static void SaveProgress()
         {
             Debug.Log("Saving player progress");
 
