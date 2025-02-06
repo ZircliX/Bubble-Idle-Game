@@ -1,4 +1,4 @@
-# Install script for directory: C:/Users/lolof/Documents/GitHub/Bubble-Idle Game/Library/PramData/AndroidApplicationController/Cache/com.ZircliX.AquaticBloom/gradle-project/unityLibrary/src/main/cpp/FramePacing
+# Install script for directory: C:/Users/lolof/Documents/GitHub/Bubble-Idle Game/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/src/main/cpp/FramePacing
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

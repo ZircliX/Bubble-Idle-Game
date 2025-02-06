@@ -17,7 +17,7 @@ namespace BubbleIdle.SaveSystem
                 secondsPassed = 0f,
                 productionBonus = 1,
                 bubbles = "50",
-                specialBubbles = "0",
+                specialBubbles = 0,
             };
         }
     }

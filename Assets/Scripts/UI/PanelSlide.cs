@@ -3,9 +3,7 @@ using UnityEngine;
 
 public class PanelSlide : MonoBehaviour
 {
-    [SerializeField] private RectTransform panel, arrow;
-    [SerializeField] private float distanceOn;
-    [SerializeField] private float distanceOff;
+    [SerializeField] private RectTransform panelOn, panelOff, panel, arrow;
     [SerializeField] private float speed = 0.5f;
     
     [Header("Debug")]
@@ -21,19 +19,19 @@ public class PanelSlide : MonoBehaviour
         isAnimating = true;
         KillCurrentTween();
 
-        float targetX;
+        RectTransform target;
         if (isOn)
         {
             arrow.DORotate(new Vector3(0, 0, 0), 0.5f).SetEase(Ease.InCubic);
-            targetX = distanceOff;
+            target = panelOff;
         }
         else
         {
             arrow.DORotate(new Vector3(0, 0, 180), 0.5f).SetEase(Ease.InCubic);
-            targetX = distanceOn;
+            target = panelOn;
         }
         
-        currentTween = panel.DOLocalMoveX(targetX, speed)
+        currentTween = panel.DOMoveX(target.position.x, speed)
             .SetEase(Ease.OutQuad)
             .OnComplete(() => 
             {

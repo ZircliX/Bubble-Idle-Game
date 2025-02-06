@@ -1,4 +1,3 @@
-using Codice.CM.Common.Tree.Partial;
 using DG.Tweening;
 using UnityEngine;
 
@@ -56,12 +55,6 @@ namespace BubbleIdle.Chest
         private void DisableChest()
         {
             isChestOpened = true;
-            
-            //Collider2D collider = GetComponent<Collider2D>();
-            //if (collider != null)
-            {
-                //collider.enabled = false;
-            }
         }
     }
 }

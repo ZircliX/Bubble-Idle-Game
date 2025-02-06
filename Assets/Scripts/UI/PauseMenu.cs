@@ -1,19 +1,11 @@
 using UnityEngine;
 
-namespace BubbleIdle.Core
+namespace BubbleIdle.UI
 {
     public class PauseMenu : MonoBehaviour
-    
     {
-  
         public GameObject PausePanel;
-
-        void Update ()
-        {
-            
-        }
-
-
+        
         public void Pause()
         {
             PausePanel.SetActive(true);

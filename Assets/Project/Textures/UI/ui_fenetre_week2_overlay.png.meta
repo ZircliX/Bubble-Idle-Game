@@ -197,7 +197,10 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      ui_fenetre_week2_overlay_0: 9073793677206429744
+      ui_fenetre_week2_overlay_1: 8412930556191911656
+      ui_fenetre_week2_overlay_2: -7672777076283126926
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

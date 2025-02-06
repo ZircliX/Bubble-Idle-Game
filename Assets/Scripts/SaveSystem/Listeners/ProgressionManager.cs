@@ -1,6 +1,5 @@
 using System;
 using System.Collections.Generic;
-using System.Globalization;
 using System.Numerics;
 using BubbleIdle.SeaweedSystem;
 using SaveSystem.Core;
@@ -20,8 +19,10 @@ namespace BubbleIdle.SaveSystem
         
         public void Write(ref SaveFile saveFile)
         {
-            DateTime time = DateTime.Now;
-            string timeString = time.ToString("o"); // ISO 8601 format
+            string timeString = Now(); // ISO 8601 format
+            Debug.Log("TIME");
+            Debug.Log(DateTime.UtcNow);
+            Debug.Log(timeString);
             saveFile.quitTime = timeString;
 
             for (int index = 0; index < seaweeds.Count; index++)
@@ -37,8 +38,13 @@ namespace BubbleIdle.SaveSystem
 
             saveFile.seaweeds = seaweeds;
             saveFile.bubbles = GameController.ResourcesManager.BubbleCount.ToString();
-            saveFile.specialBubbles = GameController.ResourcesManager.SpecialBubbleCount.ToString();
+            saveFile.specialBubbles = GameController.ResourcesManager.SpecialBubbleCount;
             saveFile.totalFishes = totalFishes;
+        }
+
+        private static string Now()
+        {
+            return DateTime.UtcNow.ToString("yyyy-MM-ddTHH:mm:ss");
         }
 
         public void Read(in SaveFile saveFile)
@@ -47,17 +53,18 @@ namespace BubbleIdle.SaveSystem
 
             if (string.IsNullOrEmpty(saveFile.quitTime))
             {
-                savedTime = DateTime.Now; // Default to current time if quitTime is null or empty
+                savedTime = DateTime.UtcNow; // Default to current time if quitTime is null or empty
             }
             else
             {
                 try
                 {
-                    savedTime = DateTime.ParseExact(saveFile.quitTime, "o", CultureInfo.InvariantCulture);
+                    savedTime = DateTime.Parse(saveFile.quitTime);
                 }
-                catch (FormatException)
+                catch (FormatException e)
                 {
                     Debug.LogError("Failed to parse quitTime. Using current time as fallback.");
+                    Debug.LogException(e);
                     savedTime = DateTime.Now;
                 }
             }
@@ -67,7 +74,7 @@ namespace BubbleIdle.SaveSystem
             SecondsPassed = timePassed.TotalSeconds;
             
             GameController.ResourcesManager.AddBubbles(saveFile.bubbles);
-            GameController.ResourcesManager.AddSpecialBubbles(int.Parse(saveFile.specialBubbles));
+            GameController.ResourcesManager.AddSpecialBubbles(saveFile.specialBubbles);
             
             seaweeds.Clear();
             seaweeds = saveFile.seaweeds;
@@ -85,11 +92,10 @@ namespace BubbleIdle.SaveSystem
             {
                 SeaweedData seaweedData = SeaweedManager.Instance.seaweedDatas[newSeaweed.typeIndex];
                 
-                float bubbleProduction = Mathf.RoundToInt(seaweedData.baseProduction) * Mathf.Pow(newSeaweed.seaweedLevel, seaweedData.productionMultiplier);
-                float bubbleProductionRate = bubbleProduction / seaweedData.productionCooldown;
+                float bubbleProduction = Mathf.RoundToInt(seaweedData.baseProduction) * Mathf.Pow(seaweedData.productionMultiplier, newSeaweed.seaweedLevel);
+                float bubbleProductionRate = (bubbleProduction / seaweedData.productionCooldown) * saveFile.productionBonus;
                 
                 BigInteger bubblesProduced = Mathf.RoundToInt(bubbleProductionRate) * Mathf.RoundToInt((float)GameController.ProgressionManager.SecondsPassed);
-                bubblesProduced = Mathf.RoundToInt((float)bubblesProduced * saveFile.productionBonus) / 15;
                 bubbles += bubblesProduced;
                 
                 GameController.ResourcesManager.AddBubbles(bubblesProduced.ToString());
