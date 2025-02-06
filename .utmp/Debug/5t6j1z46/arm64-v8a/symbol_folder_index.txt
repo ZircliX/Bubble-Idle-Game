@@ -1,1 +1,5 @@
+<<<<<<< HEAD
 C:\Users\lolof\Documents\GitHub\Bubble-Idle Game\Library\PramData\AndroidApplicationController\Cache\com.ZircliX.AquaticBloom\gradle-project\unityLibrary\build\intermediates\cxx\Debug\5t6j1z46\obj\arm64-v8a
+=======
+C:\Users\lolof\Documents\GitHub\Bubble-Idle Game\Library\Bee\Android\Prj\IL2CPP\Gradle\unityLibrary\build\intermediates\cxx\Debug\5t6j1z46\obj\arm64-v8a
+>>>>>>> 7574d4b (jsp c koi)

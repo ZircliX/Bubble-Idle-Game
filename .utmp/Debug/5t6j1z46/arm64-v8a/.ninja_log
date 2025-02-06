@@ -1,4 +1,5 @@
 # ninja log v5
+<<<<<<< HEAD
 134	933	7605076328792464	FramePacing/CMakeFiles/swappywrapper.dir/UnitySwappyWrapper.cpp.o	daeece01fa661727
 936	2350	7605076341236441	C:/Users/lolof/Documents/GitHub/Bubble-Idle Game/Library/PramData/AndroidApplicationController/Cache/com.ZircliX.AquaticBloom/gradle-project/unityLibrary/build/intermediates/cxx/Debug/5t6j1z46/obj/arm64-v8a/libswappywrapper.so	2d72b159705fef02
 14	2980	7605076349586730	GameActivity/CMakeFiles/game.dir/UGAConfiguration.cpp.o	8f52225d21fc3c58
@@ -10,3 +11,16 @@
 100	3285	7605076353244985	GameActivity/CMakeFiles/game.dir/UGAInput.cpp.o	1a8ceefe0ecc5f6d
 24	3448	7605076354745915	GameActivity/CMakeFiles/game.dir/UGAApplication.cpp.o	88d241c7f4d2efea
 3448	3892	7605076358424958	C:/Users/lolof/Documents/GitHub/Bubble-Idle Game/Library/PramData/AndroidApplicationController/Cache/com.ZircliX.AquaticBloom/gradle-project/unityLibrary/build/intermediates/cxx/Debug/5t6j1z46/obj/arm64-v8a/libgame.so	988aee13f9116b05
+=======
+61	392	7605370130443233	FramePacing/CMakeFiles/swappywrapper.dir/UnitySwappyWrapper.cpp.o	5aeb27eaa70ccfb6
+395	612	7605370132686745	C:/Users/lolof/Documents/GitHub/Bubble-Idle Game/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/build/intermediates/cxx/Debug/5t6j1z46/obj/arm64-v8a/libswappywrapper.so	9a2f6298fccee103
+28	1008	7605370136580066	GameActivity/CMakeFiles/game.dir/UGAInputKeyEvent.cpp.o	4d50b6858dc974d4
+12	1023	7605370136765131	GameActivity/CMakeFiles/game.dir/UGAConfiguration.cpp.o	70d294b4976c16c8
+43	1039	7605370136935124	GameActivity/CMakeFiles/game.dir/UGASoftKeyboard.cpp.o	fbd8553dee88620
+51	1047	7605370137035125	GameActivity/CMakeFiles/game.dir/UGAInputMotionEvent.cpp.o	8ef8dbea90ccfd95
+1	1084	7605370137360536	GameActivity/CMakeFiles/game.dir/UGADebug.cpp.o	ed3bc069b58d566b
+20	1121	7605370137782494	GameActivity/CMakeFiles/game.dir/UGAEntry.cpp.o	b2970102bcbc6c96
+35	1129	7605370137873092	GameActivity/CMakeFiles/game.dir/UGAInput.cpp.o	2bac27f4469a10cc
+7	1165	7605370138215981	GameActivity/CMakeFiles/game.dir/UGAApplication.cpp.o	592f5170ba063fa6
+1165	1294	7605370139498699	C:/Users/lolof/Documents/GitHub/Bubble-Idle Game/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/build/intermediates/cxx/Debug/5t6j1z46/obj/arm64-v8a/libgame.so	3da1effdd780a8ff
+>>>>>>> 7574d4b (jsp c koi)

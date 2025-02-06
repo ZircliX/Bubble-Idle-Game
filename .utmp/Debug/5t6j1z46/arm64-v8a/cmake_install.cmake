@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 # Install script for directory: C:/Users/lolof/Documents/GitHub/Bubble-Idle Game/Library/PramData/AndroidApplicationController/Cache/com.ZircliX.AquaticBloom/gradle-project/unityLibrary/src/main/cpp
+=======
+# Install script for directory: C:/Users/lolof/Documents/GitHub/Bubble-Idle Game/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/src/main/cpp
+>>>>>>> 7574d4b (jsp c koi)
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
