@@ -41,7 +41,7 @@ namespace BubbleIdle.Core
             }
         }
 
-        private void Play()
+        public void Play()
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         }

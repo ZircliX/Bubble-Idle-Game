@@ -20,7 +20,7 @@ namespace BubbleIdle.BubbleSystem
             ct.localScale = Vector3.one;
             ct.position = new Vector3(ct.position.x, ct.position.y, 0);
             
-            spawnedCounter.text = $"+ {amount}";
+            spawnedCounter.text = $"+ {StaticTools.FormatNumber(amount)}";
 
             Color targetColor = new Color(255, 255, 255, 0);
             spawnedCounter.DOColor(targetColor, animeTime);
